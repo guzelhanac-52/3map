@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Etimesgut 3B Harita</title>
+<style>/* maplibre-gl@4.7.1 */
+.maplibregl-map{font:12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:rgb(0 0 0/0)}.maplibregl-canvas{left:0;position:absolute;top:0}.maplibregl-map:fullscreen{height:100%;width:100%}.maplibregl-ctrl-group button.maplibregl-ctrl-compass{touch-action:none}.maplibregl-canvas-container.maplibregl-interactive,.maplibregl-ctrl-group button.maplibregl-ctrl-compass{cursor:grab;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-canvas-container.maplibregl-interactive.maplibregl-track-pointer{cursor:pointer}.maplibregl-canvas-container.maplibregl-interactive:active,.maplibregl-ctrl-group button.maplibregl-ctrl-compass:active{cursor:grabbing}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-canvas-container.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:pinch-zoom}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:none}.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures,.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right,.maplibregl-ctrl-top-left,.maplibregl-ctrl-top-right{pointer-events:none;position:absolute;z-index:2}.maplibregl-ctrl-top-left{left:0;top:0}.maplibregl-ctrl-top-right{right:0;top:0}.maplibregl-ctrl-bottom-left{bottom:0;left:0}.maplibregl-ctrl-bottom-right{bottom:0;right:0}.maplibregl-ctrl{clear:both;pointer-events:auto;transform:translate(0)}.maplibregl-ctrl-top-left .maplibregl-ctrl{float:left;margin:10px 0 0 10px}.maplibregl-ctrl-top-right .maplibregl-ctrl{float:right;margin:10px 10px 0 0}.maplibregl-ctrl-bottom-left .maplibregl-ctrl{float:left;margin:0 0 10px 10px}.maplibregl-ctrl-bottom-right .maplibregl-ctrl{float:right;margin:0 10px 10px 0}.maplibregl-ctrl-group{background:#fff;border-radius:4px}.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px rgba(0,0,0,.1)}@media (forced-colors:active){.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px ButtonText}}.maplibregl-ctrl-group button{background-color:transparent;border:0;box-sizing:border-box;cursor:pointer;display:block;height:29px;outline:none;padding:0;width:29px}.maplibregl-ctrl-group button+button{border-top:1px solid #ddd}.maplibregl-ctrl button .maplibregl-ctrl-icon{background-position:50%;background-repeat:no-repeat;display:block;height:100%;width:100%}@media (forced-colors:active){.maplibregl-ctrl-icon{background-color:transparent}.maplibregl-ctrl-group button+button{border-top:1px solid ButtonText}}.maplibregl-ctrl button::-moz-focus-inner{border:0;padding:0}.maplibregl-ctrl-attrib-button:focus,.maplibregl-ctrl-group button:focus{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl button:disabled{cursor:not-allowed}.maplibregl-ctrl button:disabled .maplibregl-ctrl-icon{opacity:.25}.maplibregl-ctrl button:not(:disabled):hover{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-group button:focus:focus-visible{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl-group button:focus:not(:focus-visible){box-shadow:none}.maplibregl-ctrl-group button:focus:first-child{border-radius:4px 4px 0 0}.maplibregl-ctrl-group button:focus:last-child{border-radius:0 0 4px 4px}.maplibregl-ctrl-group button:focus:only-child{border-radius:inherit}.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-terrain .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%23333' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%2333b5e5' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23aaa' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-waiting .maplibregl-ctrl-icon{animation:maplibregl-spin 2s linear infinite}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23999' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23666' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}}@keyframes maplibregl-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;cursor:pointer;display:block;height:23px;margin:0 0 -4px -4px;overflow:hidden;width:88px}a.maplibregl-ctrl-logo.maplibregl-compact{width:14px}@media (forced-colors:active){a.maplibregl-ctrl-logo{background-color:transparent;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}.maplibregl-ctrl.maplibregl-ctrl-attrib{background-color:hsla(0,0%,100%,.5);margin:0;padding:0 5px}@media screen{.maplibregl-ctrl-attrib.maplibregl-compact{background-color:#fff;border-radius:12px;box-sizing:content-box;color:#000;margin:10px;min-height:20px;padding:2px 24px 2px 0;position:relative}.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:2px 28px 2px 8px;visibility:visible}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact-show{border-radius:12px;padding:2px 8px 2px 28px}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-inner{display:none}.maplibregl-ctrl-attrib-button{background-color:hsla(0,0%,100%,.5);background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E");border:0;border-radius:12px;box-sizing:border-box;cursor:pointer;display:none;height:24px;outline:none;position:absolute;right:0;top:0;width:24px}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;list-style:none}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker{display:none}.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-top-left .maplibregl-ctrl-attrib-button{left:0}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{display:block}.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-button{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-bottom-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;right:0}.maplibregl-ctrl-top-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{right:0;top:0}.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{left:0;top:0}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;left:0}}@media screen and (forced-colors:active){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}@media screen and (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}.maplibregl-ctrl-attrib a{color:rgba(0,0,0,.75);text-decoration:none}.maplibregl-ctrl-attrib a:hover{color:inherit;text-decoration:underline}.maplibregl-attrib-empty{display:none}.maplibregl-ctrl-scale{background-color:hsla(0,0%,100%,.75);border:2px solid #333;border-top:#333;box-sizing:border-box;color:#333;font-size:10px;padding:0 5px}.maplibregl-popup{display:flex;left:0;pointer-events:none;position:absolute;top:0;will-change:transform}.maplibregl-popup-anchor-top,.maplibregl-popup-anchor-top-left,.maplibregl-popup-anchor-top-right{flex-direction:column}.maplibregl-popup-anchor-bottom,.maplibregl-popup-anchor-bottom-left,.maplibregl-popup-anchor-bottom-right{flex-direction:column-reverse}.maplibregl-popup-anchor-left{flex-direction:row}.maplibregl-popup-anchor-right{flex-direction:row-reverse}.maplibregl-popup-tip{border:10px solid transparent;height:0;width:0;z-index:1}.maplibregl-popup-anchor-top .maplibregl-popup-tip{align-self:center;border-bottom-color:#fff;border-top:none}.maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-start;border-bottom-color:#fff;border-left:none;border-top:none}.maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-end;border-bottom-color:#fff;border-right:none;border-top:none}.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{align-self:center;border-bottom:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-start;border-bottom:none;border-left:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-end;border-bottom:none;border-right:none;border-top-color:#fff}.maplibregl-popup-anchor-left .maplibregl-popup-tip{align-self:center;border-left:none;border-right-color:#fff}.maplibregl-popup-anchor-right .maplibregl-popup-tip{align-self:center;border-left-color:#fff;border-right:none}.maplibregl-popup-close-button{background-color:transparent;border:0;border-radius:0 3px 0 0;cursor:pointer;position:absolute;right:0;top:0}.maplibregl-popup-close-button:hover{background-color:rgb(0 0 0/5%)}.maplibregl-popup-content{background:#fff;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px 10px;pointer-events:auto;position:relative}.maplibregl-popup-anchor-top-left .maplibregl-popup-content{border-top-left-radius:0}.maplibregl-popup-anchor-top-right .maplibregl-popup-content{border-top-right-radius:0}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-content{border-bottom-left-radius:0}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-content{border-bottom-right-radius:0}.maplibregl-popup-track-pointer{display:none}.maplibregl-popup-track-pointer *{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-map:hover .maplibregl-popup-track-pointer{display:flex}.maplibregl-map:active .maplibregl-popup-track-pointer{display:none}.maplibregl-marker{left:0;position:absolute;top:0;transition:opacity .2s;will-change:transform}.maplibregl-user-location-dot,.maplibregl-user-location-dot:before{background-color:#1da1f2;border-radius:50%;height:15px;width:15px}.maplibregl-user-location-dot:before{animation:maplibregl-user-location-dot-pulse 2s infinite;content:"";position:absolute}.maplibregl-user-location-dot:after{border:2px solid #fff;border-radius:50%;box-shadow:0 0 3px rgba(0,0,0,.35);box-sizing:border-box;content:"";height:19px;left:-2px;position:absolute;top:-2px;width:19px}@keyframes maplibregl-user-location-dot-pulse{0%{opacity:1;transform:scale(1)}70%{opacity:0;transform:scale(3)}to{opacity:0;transform:scale(1)}}.maplibregl-user-location-dot-stale{background-color:#aaa}.maplibregl-user-location-dot-stale:after{display:none}.maplibregl-user-location-accuracy-circle{background-color:#1da1f233;border-radius:100%;height:1px;width:1px}.maplibregl-crosshair,.maplibregl-crosshair .maplibregl-interactive,.maplibregl-crosshair .maplibregl-interactive:active{cursor:crosshair}.maplibregl-boxzoom{background:#fff;border:2px dotted #202020;height:0;left:0;opacity:.5;position:absolute;top:0;width:0}.maplibregl-cooperative-gesture-screen{align-items:center;background:rgba(0,0,0,.4);color:#fff;display:flex;font-size:1.4em;inset:0;justify-content:center;line-height:1.2;opacity:0;padding:1rem;pointer-events:none;position:absolute;transition:opacity 1s ease 1s;z-index:99999}.maplibregl-cooperative-gesture-screen.maplibregl-show{opacity:1;transition:opacity .05s}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:none}@media (hover:none),(width <= 480px){.maplibregl-cooperative-gesture-screen .maplibregl-desktop-message{display:none}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:block}}.maplibregl-pseudo-fullscreen{height:100%!important;left:0!important;position:fixed!important;top:0!important;width:100%!important;z-index:99999}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+/* Düzen: tam ekran harita; üstte manevra tabelası, sağda kavşak görünümü, altta yolculuk şeridi */
+:root{
+  --bg:#0d141d; --panel:rgba(14,21,31,.9); --panel2:#151f2c; --ink:#e8eef6; --muted:#8c9db3; --line:rgba(160,185,215,.16);
+  --accent:#3fa9ff; --accent-ink:#04121f; --go:#2fd07a; --warn:#ffb020; --stop:#ff4d4f;
+  --man-bg:#0f4d39; --man-ink:#f2fff8; --man-sub:#a8dcc6;
+  --jv-sky1:#0a1424; --jv-sky2:#1f3754; --jv-ground:#161f2a; --jv-road:#2b3542; --jv-lane-on:#1d4f7c; --jv-arrow-on:#ffffff; --jv-arrow-off:rgba(255,255,255,.26); --jv-line:#c9d3de; --jv-city:#101a26;
+  --sign-blue:#1c5bb8; --sign-green:#1b7445;
+  --f-sign:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif; --f-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#ecefe9; --panel:rgba(255,255,255,.93); --panel2:#f3f5f2; --ink:#132030; --muted:#5a6a7d; --line:rgba(20,40,70,.13);
+  --accent:#1a7fe0; --accent-ink:#ffffff; --man-bg:#11704f; --man-ink:#ffffff; --man-sub:#c9f0de;
+  --jv-sky1:#7db8e6; --jv-sky2:#d8eaf7; --jv-ground:#c9d1c6; --jv-road:#5d6570; --jv-lane-on:#2c7cd0; --jv-arrow-off:rgba(255,255,255,.38); --jv-line:#ffffff; --jv-city:#aab7c2;
+  color-scheme:light; } }
+:root[data-theme="light"]{
+  --bg:#ecefe9; --panel:rgba(255,255,255,.93); --panel2:#f3f5f2; --ink:#132030; --muted:#5a6a7d; --line:rgba(20,40,70,.13);
+  --accent:#1a7fe0; --accent-ink:#ffffff; --man-bg:#11704f; --man-ink:#ffffff; --man-sub:#c9f0de;
+  --jv-sky1:#7db8e6; --jv-sky2:#d8eaf7; --jv-ground:#c9d1c6; --jv-road:#5d6570; --jv-lane-on:#2c7cd0; --jv-arrow-off:rgba(255,255,255,.38); --jv-line:#ffffff; --jv-city:#aab7c2;
+  color-scheme:light; }
+[hidden]{display:none!important}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.4 var(--f-ui);overflow:hidden}
+#map{position:absolute;inset:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.28)}
+
+/* arama */
+#search{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));width:min(360px,calc(100vw - 92px));z-index:5}
+#search .box{display:flex;align-items:center;gap:8px;padding:0 12px;height:48px}
+#search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:500 16px var(--f-ui);outline:none}
+#search input::placeholder{color:var(--muted)}
+#results{margin-top:6px;overflow:hidden}
+#results button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:10px 14px;border-top:1px solid var(--line)}
+#results button:first-child{border-top:0}
+#results button:hover,#results button:focus-visible{background:var(--line)}
+#results small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* manevra tabelası */
+#maneuver{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(440px,calc(100vw - 24px));z-index:6;background:var(--man-bg);color:var(--man-ink);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.35);overflow:hidden}
+#maneuver .row{display:flex;gap:14px;align-items:center;padding:12px 16px}
+#mIcon{flex:none;width:64px;height:64px}
+#mDist{font:700 34px/1 var(--f-sign);letter-spacing:.01em;font-variant-numeric:tabular-nums}
+#mText{font:600 17px/1.2 var(--f-sign);margin-top:2px}
+#mStreet{font:500 15px/1.2 var(--f-ui);color:var(--man-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mLanes{display:flex;justify-content:center;gap:2px;padding:6px 10px 8px;background:rgba(0,0,0,.22)}
+#mLanes svg{width:30px;height:36px}
+#mLanes .sep{width:2px;background:rgba(255,255,255,.35);margin:4px 0;border-radius:1px}
+
+/* kavşak görünümü */
+#jv{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:calc(12px + env(safe-area-inset-top,0px));width:min(360px,calc(100vw - 24px));z-index:5;overflow:hidden}
+#jv header{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:10px 14px 8px}
+#jv h2{margin:0;font:700 13px var(--f-sign);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#jv .meta{font:500 13px var(--f-ui);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#jvClose{border:0;background:transparent;color:var(--muted);font-size:20px;line-height:1;padding:0 4px}
+#jvArt{position:relative}
+#jvArt svg{display:block;width:100%;height:auto}
+#jvDist{position:absolute;left:10px;bottom:8px;font:700 22px/1 var(--f-sign);color:#fff;background:rgba(0,0,0,.45);padding:4px 8px;border-radius:8px;font-variant-numeric:tabular-nums}
+#jvDist:empty{display:none}
+.sg1{font:700 16px var(--f-sign);fill:#fff}
+.sg2{font:600 12px var(--f-sign);fill:#fff;letter-spacing:.04em}
+
+/* sağ kontrol rayı */
+#rail{position:absolute;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(120px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;z-index:4}
+#rail button{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font:700 15px var(--f-sign);letter-spacing:.04em}
+#rail svg{width:24px;height:24px}
+#rail button.on{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+body.pick #map canvas{cursor:crosshair}
+
+/* durum çipi */
+#status{position:absolute;left:max(12px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;font:500 13px var(--f-ui);color:var(--muted);max-width:calc(100vw - 110px)}
+#status i{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+#status.ok i{background:var(--go)} #status.busy i{background:var(--warn);animation:pulse 1s infinite} #status.err i{background:var(--stop)}
+#status span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@keyframes pulse{50%{opacity:.3}}
+
+/* yolculuk şeridi */
+#trip{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(560px,calc(100vw - 24px));z-index:6;display:flex;align-items:center;gap:14px;padding:10px 12px 10px 14px}
+.sl{flex:none;width:52px;height:52px;border-radius:50%;background:#fff;border:6px solid #d42a2a;display:grid;place-items:center;font:700 20px var(--f-sign);color:#111;box-sizing:border-box}
+.sl.none{border-color:#8a96a6;color:#8a96a6}
+.spd{flex:none;text-align:center;min-width:52px}
+.spd b{display:block;font:700 30px/1 var(--f-sign);font-variant-numeric:tabular-nums}
+.spd small{color:var(--muted);font-size:12px}
+.eta{flex:1;min-width:0}
+.eta b{font:700 22px/1.1 var(--f-sign);color:var(--go);font-variant-numeric:tabular-nums}
+.eta div{color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.tbtn{border:1px solid var(--line);background:var(--panel2);border-radius:10px;height:42px;padding:0 12px;font:600 15px var(--f-sign);letter-spacing:.03em}
+.tbtn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.tbtn.icon{width:42px;padding:0}
+.trip-btns{display:flex;gap:6px;flex:none}
+.tbtn.icon svg{width:20px;height:20px;display:block;margin:auto}
+.tbtn.off{opacity:.55}
+.sl.over{animation:over .8s infinite}
+.spd.over b{color:var(--stop)}
+@keyframes over{50%{box-shadow:0 0 0 6px rgba(255,77,79,.45)}}
+
+/* yaklaşan uyarılar */
+#alerts{position:absolute;left:max(12px,env(safe-area-inset-left,0px));top:calc(72px + env(safe-area-inset-top,0px));z-index:6;display:flex;flex-direction:column;gap:8px;width:184px}
+.alert{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px}
+.alert img{flex:none;width:44px;height:44px;object-fit:contain}
+.alert b{display:block;font:700 24px/1 var(--f-sign);font-variant-numeric:tabular-nums}
+.alert span{display:block;color:var(--muted);font:600 13px/1.2 var(--f-sign);margin-top:2px}
+.alert.hot{border-color:var(--warn);box-shadow:0 0 0 2px var(--warn) inset,0 10px 30px rgba(0,0,0,.28)}
+
+/* mevcut yol ve şerit sayısı */
+#road{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:5;display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;max-width:calc(100vw - 40px);box-sizing:border-box}
+#rName{font:600 15px var(--f-sign);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#rLanes{flex:none;display:flex;align-items:center;gap:6px;color:var(--muted);font:600 13px var(--f-sign);white-space:nowrap}
+#rLanes i{display:flex;gap:2px}
+#rLanes i u{display:block;width:5px;height:14px;border-radius:1.5px;background:var(--accent)}
+
+/* ipucu */
+#toast{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:8;padding:10px 16px;border-radius:12px;font-size:14px;max-width:calc(100vw - 40px);text-align:center;transition:opacity .3s}
+#toast.hide{opacity:0;pointer-events:none}
+
+/* harita açılır menü */
+.maplibregl-popup-content{background:var(--panel2);color:var(--ink);border-radius:12px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.maplibregl-popup-tip{border-top-color:var(--panel2)!important;border-bottom-color:var(--panel2)!important}
+.pmenu button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:9px 12px;border-radius:8px;font:600 15px var(--f-sign)}
+.pmenu button:hover{background:var(--line)}
+.dest-pin{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--stop);border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.maplibregl-ctrl-attrib{background:var(--panel)!important;color:var(--muted)}
+.maplibregl-ctrl-attrib a{color:var(--muted)}
+.maplibregl-ctrl-bottom-right{bottom:env(safe-area-inset-bottom,0px)}
+
+
+/* yükleme */
+#load{position:absolute;inset:0;z-index:30;display:grid;place-items:center;background:rgba(6,10,16,.5);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#load .card{width:min(420px,100%);padding:20px 22px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px}
+#load small{color:var(--muted);font:600 11px var(--f-sign);letter-spacing:.1em;text-transform:uppercase}
+#load h2{margin:0;font:700 24px/1.1 var(--f-sign)}
+#load p{margin:0;color:var(--muted);font-size:14px}
+#load .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+#load .bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .4s}
+#load.err .bar i{background:var(--warn)}
+#loadTxt{font:500 14px var(--f-ui);font-variant-numeric:tabular-nums}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:4px;width:100%}
+.sgrid button{height:48px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);padding:3px;display:grid;place-items:center}
+.sgrid button.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset;background:var(--line)}
+.sgrid img{max-width:38px;max-height:38px}
+#edhint.wide{width:min(560px,calc(100vw - 24px))}
+#edhint.wide .sgrid{order:3}
+.mnote{display:block;padding:2px 12px 6px;color:var(--muted);font-size:12px}
+.hint .warn,b.warn{color:var(--warn)}
+/* düzenleyici */
+#rail button.on{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+body.edit #trip,body.edit #maneuver,body.edit #jv{display:none!important}
+body.edit #status{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+#edbar{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:7;width:min(900px,calc(100vw - 24px));padding:5px 5px 4px;display:flex;flex-direction:column;gap:2px;box-sizing:border-box}
+#edbar .tools{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+#edbar .tools::-webkit-scrollbar{display:none}
+#edbar .tools button{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:56px;padding:7px 6px 5px;border:0;border-radius:10px;background:transparent;font:600 12px/1 var(--f-sign);letter-spacing:.02em}
+#edbar .tools button svg{width:22px;height:22px}
+#edbar .tools button:hover:not(:disabled){background:var(--line)}
+#edbar .tools button.on{background:var(--accent);color:var(--accent-ink)}
+#edbar .tools button:disabled{opacity:.32;cursor:default}
+#edbar .tools .done{background:var(--go);color:#04210f;margin-left:auto}
+#edbar .tools .sep{flex:none;width:1px;background:var(--line);margin:8px 3px}
+body.orig #edbar [data-tool]{opacity:.3;pointer-events:none}
+#edInfoRow{display:flex;justify-content:space-between;gap:10px;padding:0 8px 2px;font:500 12px var(--f-ui);color:var(--muted);white-space:nowrap;overflow:hidden}
+#edInfoRow .bad{color:var(--stop);font-weight:600}
+#edhint{position:absolute;top:calc(70px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:7;display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:7px 7px 7px 14px;max-width:calc(100vw - 24px);box-sizing:border-box;font:500 14px var(--f-ui)}
+#edhint span{flex:1 1 180px;min-width:0}
+#edpanel{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:calc(12px + env(safe-area-inset-top,0px));width:min(340px,calc(100vw - 24px));max-height:calc(100% - 140px);overflow:auto;z-index:7;padding:12px 14px 14px;display:flex;flex-direction:column;gap:11px;box-sizing:border-box}
+body.edit #rail{right:calc(max(12px,env(safe-area-inset-right,0px)) + 0px)}
+@media (min-width:761px){ body.edit:has(#edpanel:not([hidden])) #rail{right:calc(max(12px,env(safe-area-inset-right,0px)) + 352px)} }
+.edh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.edh small{color:var(--muted);font:600 11px var(--f-sign);letter-spacing:.08em;text-transform:uppercase}
+.edh h3{margin:2px 0 0;font:700 21px/1.15 var(--f-sign);text-wrap:balance}
+.edh button{border:0;background:transparent;color:var(--muted);font-size:24px;line-height:1;padding:0 2px}
+.f{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.f>span{color:var(--muted);font-size:13px;flex:none}
+.f input,.f select{flex:1;min-width:0;height:36px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);color:var(--ink);padding:0 10px;font:500 15px var(--f-ui);box-sizing:border-box}
+.step{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel2)}
+.step button{width:40px;height:36px;border:0;background:transparent;font:700 20px var(--f-sign)}
+.step button:hover{background:var(--line)}
+.step b{min-width:64px;text-align:center;font:700 17px var(--f-sign);font-variant-numeric:tabular-nums}
+.seg{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.seg button,.chips button{border:1px solid var(--line);background:var(--panel2);border-radius:8px;height:32px;padding:0 10px;font:600 14px var(--f-sign)}
+.seg button.on,.chips button.on{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.seg button:disabled{opacity:.4}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:-4px}
+.blk{display:flex;flex-direction:column;gap:6px}
+.blk>span{color:var(--muted);font-size:12.5px}
+.lanes{display:flex;gap:3px;background:#2b3542;padding:6px;border-radius:8px;justify-content:center;flex-wrap:wrap}
+.lanes button{width:40px;height:54px;border:0;border-radius:6px;background:rgba(255,255,255,.07);padding:4px}
+.lanes button:hover{background:rgba(255,255,255,.16)}
+.lanes button svg{width:100%;height:100%}
+.hint{margin:0;color:var(--muted);font-size:12.5px;line-height:1.4}
+.hint.warn{color:var(--warn)}
+.acts{display:flex;gap:6px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--panel2);border-radius:9px;height:36px;padding:0 12px;font:600 14px var(--f-sign)}
+.btn:hover:not(:disabled){background:var(--line)}
+.btn:disabled{opacity:.4}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.danger,#edmenu .danger{color:var(--stop)}
+#edmenu{position:absolute;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(104px + env(safe-area-inset-bottom,0px));z-index:8;display:flex;flex-direction:column;padding:6px;min-width:250px}
+#edmenu button,#edmenu label{display:block;text-align:left;border:0;background:transparent;padding:10px 12px;border-radius:8px;font:600 15px var(--f-sign);cursor:pointer}
+#edmenu button:hover,#edmenu label:hover{background:var(--line)}
+#edmenu input{display:none}
+body.edit .maplibregl-canvas{cursor:pointer}
+@media (max-width:760px){
+  #edpanel{top:auto;bottom:calc(96px + env(safe-area-inset-bottom,0px));left:12px;right:12px;width:auto;max-height:48%}
+  #edhint{top:calc(12px + env(safe-area-inset-top,0px));left:12px;transform:none;max-width:calc(100vw - 84px)}
+  body.edit #search{display:none}
+  body.edit #rail{top:calc(12px + env(safe-area-inset-top,0px));bottom:auto}
+  body.edit #status{display:none}
+}
+@media (max-width:760px){
+  #jv{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));left:12px;right:12px;width:auto}
+  body.nav #search{display:none}
+  #search{width:calc(100vw - 92px)}
+  #maneuver{top:calc(70px + env(safe-area-inset-top,0px))}
+  body.nav #maneuver{top:calc(12px + env(safe-area-inset-top,0px))}
+  #rail{top:calc(70px + env(safe-area-inset-top,0px));bottom:auto}
+  body.nav #rail{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  body.nav.jvon #rail{display:none}
+  #trip{gap:10px}
+  .spd{display:none}
+  #alerts{width:150px}
+  .alert img{width:36px;height:36px}
+  .alert b{font-size:20px}
+  body.jvon #road{display:none}
+}
+@media (prefers-reduced-motion:reduce){ #status.busy i{animation:none} }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<div id="search">
+  <div class="box panel">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+    <input id="q" type="search" placeholder="Nereye gidiyoruz?" autocomplete="off" aria-label="Hedef ara">
+  </div>
+  <div id="results" class="panel" hidden></div>
+</div>
+
+<section id="maneuver" hidden aria-live="polite">
+  <div class="row">
+    <svg id="mIcon" viewBox="0 0 100 100" aria-hidden="true"></svg>
+    <div style="min-width:0">
+      <div id="mDist">—</div>
+      <div id="mText"></div>
+      <div id="mStreet"></div>
+    </div>
+  </div>
+  <div id="mLanes" hidden></div>
+</section>
+
+<aside id="jv" class="panel" hidden>
+  <header><div style="min-width:0"><h2 id="jvTitle">Kavşak görünümü</h2><div class="meta" id="jvMeta"></div></div><button id="jvClose" aria-label="Kapat">×</button></header>
+  <div id="jvArt"></div>
+</aside>
+
+<div id="rail">
+  <button id="bRoute" class="panel" title="Yol tarifi: haritada hedefe dokun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c3-6 11-2 14-12"/><circle cx="5" cy="19" r="2"/><path d="M19 3v4h-4"/></svg></button>
+  <button id="bEdit" class="panel" title="Haritayı düzenle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg></button>
+  <button id="b3d" class="panel" title="3B / 2B görünüm">3B</button>
+  <button id="bNorth" class="panel" title="Kuzeye çevir"><svg id="compass" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 16 12H8z" fill="#ff4d4f"/><path d="M12 22 8 12h8z" fill="currentColor" opacity=".55"/></svg></button>
+  <button id="bTheme" class="panel" title="Gece / gündüz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+  <button id="bCar" class="panel" title="Araca dön"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 20 12 16 5 20z" fill="var(--accent)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+</div>
+
+<div id="status" class="panel"><i></i><span>Harita yükleniyor…</span></div>
+
+<div id="alerts" aria-live="polite"></div>
+<div id="road" class="panel" hidden><span id="rName"></span><span id="rLanes"></span></div>
+
+<footer id="trip" class="panel" hidden>
+  <div class="sl none" id="tLimit">—</div>
+  <div class="spd"><b id="tSpeed">0</b><small>km/s</small></div>
+  <div class="eta"><b id="tEta">--:--</b><div id="tRest"></div></div>
+  <div class="trip-btns">
+    <button class="tbtn icon" id="bVoice" title="Sesli yönlendirme" aria-label="Sesli yönlendirme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg></button>
+    <button class="tbtn" id="bMult" title="Simülasyon hızı">1×</button>
+    <button class="tbtn primary" id="bGo">Başlat</button>
+    <button class="tbtn icon" id="bEnd" title="Rotayı kapat" aria-label="Rotayı kapat">✕</button>
+  </div>
+</footer>
+
+
+<div id="edhint" class="panel" hidden></div>
+<aside id="edpanel" class="panel" hidden></aside>
+<div id="edmenu" class="panel" hidden>
+  <button id="edExport">Yedeği indir (.json)</button>
+  <label class="filebtn">Yedekten geri yükle<input id="edImport" type="file" accept=".json,application/json"></label>
+  <button id="edRefresh">OSM verisini yeniden indir</button>
+  <span id="edData" class="mnote"></span>
+  <button id="edClear" class="danger">Tüm düzenlemeleri sil</button>
+</div>
+<div id="edbar" class="panel" hidden>
+  <div class="tools" role="toolbar" aria-label="Düzenleme araçları">
+    <button data-tool="select" class="on"><svg viewBox="0 0 24 24" aria-hidden="true" ><path d="M6 3l13 7.5-5.6 1.6L11 18z" fill="currentColor"/></svg>Seç</button>
+    <button data-tool="road"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21 10 3M17 21 14 3M12 5v2.5M12 10.5v3M12 16.5v3"/></svg>Yol çiz</button>
+    <button data-tool="bld"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12zM9 21v-5h6v5"/></svg>Bina çiz</button>
+    <i class="sep"></i>
+    <button data-tool="traffic_signals"><svg viewBox="0 0 24 24" aria-hidden="true" ><rect x="8" y="2" width="8" height="16" rx="2.5" fill="#1b2129" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="6" r="1.8" fill="#ff3b30"/><circle cx="12" cy="10" r="1.8" fill="#ffbf1a"/><circle cx="12" cy="14" r="1.8" fill="#2fe07a"/><path d="M12 18v4" stroke="currentColor" stroke-width="2"/></svg>Işık</button>
+    <button data-tool="crossing"><svg viewBox="0 0 24 24" aria-hidden="true" ><path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke="currentColor" stroke-width="2.4"/></svg>Geçit</button>
+    <button data-tool="sign"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="8" fill="#fff" stroke="#d42a2a" stroke-width="3"/><path d="M12 18v5" stroke="currentColor" stroke-width="2"/><text x="12" y="13" text-anchor="middle" font-size="7.5" font-weight="700" fill="#111" font-family="Arial">50</text></svg>Levha</button>
+    <button data-tool="dir_sign"><svg viewBox="0 0 24 24" aria-hidden="true" ><rect x="2" y="5" width="20" height="10" rx="2" fill="#1c5bb8" stroke="#fff" stroke-width="1.2"/><path d="M12 15v7" stroke="currentColor" stroke-width="2"/></svg>Tabela</button>
+    <i class="sep"></i>
+    <button id="edUndo" disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>Geri al</button>
+    <button id="edRedo" disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/></svg>İleri al</button>
+    <button id="edOrig"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Orijinal</button>
+    <button id="edMore"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Yedek</button>
+    <button id="edDone" class="done"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>Bitti</button>
+  </div>
+  <div id="edInfoRow"><span id="edCount"></span><span id="edSave"></span></div>
+</div>
+<div id="load" hidden>
+  <div class="card panel">
+    <small>Demo bölgesi</small>
+    <h2>Etimesgut haritası hazırlanıyor</h2>
+    <p>Yollar, şeritler, ışıklar ve binalar OpenStreetMap'ten bir kez indirilip bu tarayıcıda saklanır. Sonraki açılışlar anında gelir.</p>
+    <div class="bar"><i id="loadBar"></i></div>
+    <div id="loadTxt">…</div>
+    <div id="loadErr" class="acts" hidden><button class="btn primary" id="loadRetry">Tekrar dene</button><button class="btn" id="loadSkip">Verisiz aç</button></div>
+  </div>
+</div>
+<div id="toast" class="panel hide"></div>
+
+<script>
+"use strict";
+/* ============ temel ayarlar ============ */
+const AREA={name:'Etimesgut',s:39.925,w:32.625,n:39.975,e:32.705};   // demo bölgesi
+const START=[32.6655,39.9490];           // Etimesgut merkez
+const DEG=Math.PI/180;
+let lat0=START[1];
+const $=s=>document.querySelector(s);
+const OVP=['https://overpass-api.de/api/interpreter','https://overpass.private.coffee/api/interpreter','https://maps.mail.ru/osm/tools/overpass/api/interpreter'];
+let ovpBest=null;
+const ROUTERS=['https://routing.openstreetmap.de/routed-car/route/v1/driving/','https://router.project-osrm.org/route/v1/driving/'];
+
+const PAL={
+ night:{bg:'#0d141d',land:'#111a25',park:'#10241d',water:'#0a2236',waterLine:'#123552',road:'#2a3340',roadMinor:'#212934',casing:'#3a4554',mark:'#d7e0ea',bld0:'#1b2634',bld1:'#2a3a4f',bld2:'#46608a',label:'#aebccd',halo:'#0d141d',place:'#dfe7f1',rail:'#3a4352',route:'#3fa9ff',routeCase:'#0b4f8a',ovSurf:'#2f3845',ovCase:'#4a5668',sky:'#0b1626',horizon:'#1f3450',fog:'#0d141d'},
+ day:{bg:'#ecefe9',land:'#e3e7dd',park:'#cde2c1',water:'#a6cce6',waterLine:'#8fbfe0',road:'#6c7480',roadMinor:'#8d949e',casing:'#c3c8ce',mark:'#ffffff',bld0:'#ebe5db',bld1:'#d8cfc2',bld2:'#b8ac9b',label:'#2d3744',halo:'#ffffff',place:'#1b2430',rail:'#b5bac1',route:'#1a7fe0',routeCase:'#0b4f8a',ovSurf:'#5f6773',ovCase:'#b6bcc4',sky:'#8fc4ec',horizon:'#dcebf6',fog:'#ecefe9'}
+};
+let mode = matchMedia('(prefers-color-scheme: light)').matches ? 'day' : 'night';
+document.documentElement.dataset.theme = mode==='day'?'light':'dark';
+
+/* metreyi piksele çeviren yakınlık ifadesi */
+function mw(w,min){
+  const k=1/(78271.517*Math.cos(lat0*DEG));
+  const e=['interpolate',['exponential',2],['zoom']];
+  for(const z of [10,12,14,16,18,20,22,24]){ let v=['*',w,Math.pow(2,z)*k]; if(min) v=['max',min,v]; e.push(z,v); }
+  return e;
+}
+const ROADCLS=['motorway','trunk','primary','secondary','tertiary','minor','service'];
+const wBase=['case',['==',['get','ramp'],1],6,['match',['get','class'],'motorway',12,'trunk',12,'primary',14,'secondary',11,'tertiary',9,'minor',7,'service',4.5,4]];
+const roadFilter=['all',['match',['get','class'],ROADCLS,true,false],['!=',['get','brunnel'],'tunnel']];
+const bldColor=P=>['interpolate',['linear'],['coalesce',['get','render_height'],6],0,P.bld0,25,P.bld1,90,P.bld2];
+const LAMP_ON={r:[6,7,8,9,10,11],y:[5,11],g:[0,1,2,3,4]};
+const lampOp=(c,p)=>['match',['%',['+',['get','off'],p],12],LAMP_ON[c],1,0];
+const EMPTY={type:'FeatureCollection',features:[]};
+
+function buildStyle(P){
+  const F='Noto Sans Regular';
+  return {
+    version:8,
+    glyphs:'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',
+    sources:{
+      omt:{type:'vector',url:'https://tiles.openfreemap.org/planet',attribution:'<a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/" target="_blank">OpenMapTiles</a> Veri © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'},
+      'ov-surf':{type:'geojson',data:EMPTY},'ov-mark':{type:'geojson',data:EMPTY},'ov-poly':{type:'geojson',data:EMPTY},'ov-pts':{type:'geojson',data:EMPTY},
+      route:{type:'geojson',data:EMPTY},'rt-al':{type:'geojson',data:EMPTY},car:{type:'geojson',data:EMPTY},
+      b3:{type:'geojson',data:EMPTY},'ed-bld':{type:'geojson',data:EMPTY},'area':{type:'geojson',data:EMPTY},'ed-sel':{type:'geojson',data:EMPTY},'ed-draw':{type:'geojson',data:EMPTY},'ed-hit':{type:'geojson',data:EMPTY}
+    },
+    sky:{'sky-color':P.sky,'horizon-color':P.horizon,'fog-color':P.fog,'sky-horizon-blend':0.6,'horizon-fog-blend':0.5,'fog-ground-blend':0.6,'atmosphere-blend':0.6},
+    light:{anchor:'viewport',color:'#ffffff',intensity:0.35,position:[1.2,210,35]},
+    layers:[
+      {id:'bg',type:'background',paint:{'background-color':P.bg}},
+      {id:'landuse',type:'fill',source:'omt','source-layer':'landuse',paint:{'fill-color':P.land,'fill-opacity':0.7}},
+      {id:'park',type:'fill',source:'omt','source-layer':'park',paint:{'fill-color':P.park}},
+      {id:'landcover',type:'fill',source:'omt','source-layer':'landcover',filter:['match',['get','class'],['grass','wood'],true,false],paint:{'fill-color':P.park,'fill-opacity':0.6}},
+      {id:'water',type:'fill',source:'omt','source-layer':'water',paint:{'fill-color':P.water}},
+      {id:'waterway',type:'line',source:'omt','source-layer':'waterway',paint:{'line-color':P.waterLine,'line-width':1.5}},
+      {id:'road-case',type:'line',source:'omt','source-layer':'transportation',minzoom:12,filter:roadFilter,layout:{'line-join':'round','line-cap':'round','line-sort-key':['match',['get','class'],'motorway',7,'trunk',6,'primary',5,'secondary',4,'tertiary',3,'minor',2,1]},paint:{'line-color':P.casing,'line-width':1}},
+      {id:'road',type:'line',source:'omt','source-layer':'transportation',minzoom:10,filter:roadFilter,layout:{'line-join':'round','line-cap':'round','line-sort-key':['match',['get','class'],'motorway',7,'trunk',6,'primary',5,'secondary',4,'tertiary',3,'minor',2,1]},paint:{'line-color':['match',['get','class'],['minor','service'],P.roadMinor,P.road],'line-width':1}},
+      {id:'road-center',type:'line',source:'omt','source-layer':'transportation',minzoom:16,filter:['all',roadFilter,['match',['get','class'],['primary','secondary','tertiary'],true,false],['!',['in',['coalesce',['get','oneway'],0],['literal',[1,-1]]]]],paint:{'line-color':P.mark,'line-opacity':0.7,'line-width':1,'line-dasharray':[4,6]}},
+      {id:'rail',type:'line',source:'omt','source-layer':'transportation',minzoom:13,filter:['==',['get','class'],'rail'],paint:{'line-color':P.rail,'line-width':1.5,'line-dasharray':[3,3]}},
+      {id:'ov-case',type:'line',source:'ov-surf',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':P.ovCase,'line-width':1}},
+      {id:'ov-surf',type:'line',source:'ov-surf',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':P.ovSurf,'line-width':1}},
+      {id:'ov-poly',type:'fill',source:'ov-poly',minzoom:15.5,paint:{'fill-color':P.mark,'fill-opacity':0.9}},
+      {id:'ov-mark-s',type:'line',source:'ov-mark',minzoom:15.5,filter:['==',['get','t'],'s'],layout:{'line-join':'round'},paint:{'line-color':P.mark,'line-width':1,'line-opacity':0.92}},
+      {id:'ov-mark-d',type:'line',source:'ov-mark',minzoom:15.5,filter:['==',['get','t'],'d'],paint:{'line-color':P.mark,'line-width':1,'line-opacity':0.85,'line-dasharray':[6,8]}},
+      {id:'route-case',type:'line',source:'route',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':P.routeCase,'line-width':6,'line-opacity':0.75}},
+      {id:'route',type:'line',source:'route',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':P.route,'line-width':4,'line-opacity':0.8}},
+      {id:'ed-sel-line',type:'line',source:'ed-sel',filter:['==',['get','t'],'line'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#3fa9ff','line-opacity':0.42,'line-width':8}},
+      {id:'ed-sel-out',type:'line',source:'ed-sel',filter:['==',['get','t'],'cap'],paint:{'line-color':'#3fa9ff','line-width':3}},
+      {id:'ov-arrows',type:'symbol',source:'ov-pts',minzoom:16,filter:['==',['get','k'],'arr'],layout:{'icon-image':['get','icon'],'icon-rotate':['get','rot'],'icon-rotation-alignment':'map','icon-pitch-alignment':'map','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-size':0.5}},
+      {id:'bld',type:'fill-extrusion',source:'omt','source-layer':'building',minzoom:14,filter:['!=',['get','hide_3d'],true],paint:{'fill-extrusion-color':bldColor(P),'fill-extrusion-height':['interpolate',['linear'],['zoom'],14,0,15.2,['coalesce',['get','render_height'],6]],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':0.93,'fill-extrusion-vertical-gradient':true}},
+      {id:'area-line',type:'line',source:'area',paint:{'line-color':'#3fa9ff','line-width':2,'line-opacity':0.55,'line-dasharray':[3,2]}},
+      {id:'b3',type:'fill-extrusion',source:'b3',filter:['!=',['get','del'],1],paint:{'fill-extrusion-color':bldColor(P),'fill-extrusion-height':['interpolate',['linear'],['zoom'],13.5,0,15,['get','render_height']],'fill-extrusion-base':['coalesce',['get','render_min_height'],0],'fill-extrusion-opacity':0.94,'fill-extrusion-vertical-gradient':true}},
+      {id:'ed-bld',type:'fill-extrusion',source:'ed-bld',paint:{'fill-extrusion-color':bldColor(P),'fill-extrusion-height':['get','render_height'],'fill-extrusion-base':0,'fill-extrusion-opacity':0.95,'fill-extrusion-vertical-gradient':true}},
+      {id:'ed-sel-cap',type:'fill-extrusion',source:'ed-sel',filter:['==',['get','t'],'cap'],paint:{'fill-extrusion-color':'#3fa9ff','fill-extrusion-base':['get','h'],'fill-extrusion-height':['+',['get','h'],0.8],'fill-extrusion-opacity':0.9}},
+      ...['','-r','-y','-g'].map(sx=>({id:'ov-sig'+sx,type:'symbol',source:'ov-pts',minzoom:15.5,filter:['==',['get','k'],'sig'],layout:{'icon-image':'tl'+(sx||'-base'),'icon-anchor':'bottom','icon-pitch-alignment':'viewport','icon-rotation-alignment':'viewport','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-size':0.5},paint:sx?{'icon-opacity':lampOp(sx[1],0),'icon-opacity-transition':{duration:0}}:{}})),
+      {id:'ov-sign',type:'symbol',source:'ov-pts',minzoom:16,filter:['==',['get','k'],'sign'],layout:{'icon-image':['get','icon'],'icon-anchor':'bottom','icon-pitch-alignment':'viewport','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-size':0.5}},
+      {id:'ov-dsign',type:'symbol',source:'ov-pts',minzoom:16,filter:['==',['get','k'],'dsign'],layout:{'icon-image':['get','icon'],'icon-anchor':'bottom','icon-pitch-alignment':'viewport','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-size':0.5}},
+      {id:'ed-sel-dir',type:'symbol',source:'ed-sel',filter:['==',['get','t'],'line'],layout:{'symbol-placement':'line','symbol-spacing':56,'icon-image':'ed-chev','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-rotation-alignment':'map','icon-pitch-alignment':'map','icon-size':0.6}},
+      {id:'ov-speed',type:'symbol',source:'ov-pts',minzoom:16,filter:['==',['get','k'],'sl'],layout:{'icon-image':['get','icon'],'icon-anchor':'bottom','icon-pitch-alignment':'viewport','icon-allow-overlap':false,'icon-size':0.5}},
+      {id:'rt-al',type:'symbol',source:'rt-al',minzoom:12.5,maxzoom:16,layout:{'icon-image':['concat','ab:',['get','kind']],'icon-size':['interpolate',['linear'],['zoom'],12.5,0.45,16,0.7],'icon-allow-overlap':false,'icon-padding':1}},
+      {id:'road-label',type:'symbol',source:'omt','source-layer':'transportation_name',minzoom:13,layout:{'symbol-placement':'line','text-field':['coalesce',['get','name:tr'],['get','name']],'text-font':[F],'text-size':['interpolate',['linear'],['zoom'],13,11,18,15],'text-max-angle':30,'symbol-spacing':320},paint:{'text-color':P.label,'text-halo-color':P.halo,'text-halo-width':1.6}},
+      {id:'place',type:'symbol',source:'omt','source-layer':'place',filter:['match',['get','class'],['city','town','suburb','quarter','neighbourhood','village'],true,false],layout:{'text-field':['coalesce',['get','name:tr'],['get','name']],'text-font':[F],'text-size':['match',['get','class'],'city',18,'town',15,13],'text-transform':'uppercase','text-letter-spacing':0.08},paint:{'text-color':P.place,'text-halo-color':P.halo,'text-halo-width':1.5,'text-opacity':0.85}},
+      {id:'ed-draw-fill',type:'fill',source:'ed-draw',filter:['==',['geometry-type'],'Polygon'],paint:{'fill-color':'#ffb020','fill-opacity':0.25}},
+      {id:'ed-draw-line',type:'line',source:'ed-draw',filter:['==',['geometry-type'],'LineString'],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#ffb020','line-width':3,'line-dasharray':[2,1]}},
+      {id:'ed-draw-pt',type:'circle',source:'ed-draw',filter:['==',['geometry-type'],'Point'],paint:{'circle-radius':['case',['==',['get','first'],1],7,5],'circle-color':'#ffb020','circle-stroke-color':'#fff','circle-stroke-width':2}},
+      {id:'ed-hit',type:'circle',source:'ed-hit',minzoom:15,layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],15,3,17,6,19,9],'circle-color':['match',['get','kind'],'traffic_signals','#ffbf1a','crossing','#f2f5f8','stop','#ff4d4f','give_way','#ff8c42','speed_sign','#e23b3b','sign','#e23b3b','dir_sign','#3fa9ff','#9aa6b4'],'circle-stroke-color':'#0d141d','circle-stroke-width':2,'circle-pitch-alignment':'map'}},
+      {id:'ed-sel-pt',type:'circle',source:'ed-sel',filter:['==',['get','t'],'pt'],paint:{'circle-radius':14,'circle-color':'rgba(63,169,255,0.18)','circle-stroke-color':'#3fa9ff','circle-stroke-width':3,'circle-pitch-alignment':'map'}},
+      {id:'car',type:'symbol',source:'car',layout:{'icon-image':'car','icon-rotate':['get','b'],'icon-rotation-alignment':'map','icon-pitch-alignment':'map','icon-allow-overlap':true,'icon-ignore-placement':true,'icon-size':['interpolate',['linear'],['zoom'],12,0.55,17,0.9,20,1.3]}}
+    ]
+  };
+}
+
+function setWidths(){
+  const s=(l,p,v)=>map.getLayer(l)&&map.setPaintProperty(l,p,v);
+  s('road-case','line-width',mw(['+',wBase,1.6],1.5));
+  s('road','line-width',mw(wBase,['match',['get','class'],['motorway','trunk','primary'],1.4,0.7]));
+  s('road-center','line-width',mw(0.2,0.8));
+  s('ov-case','line-width',mw(['+',['get','w'],1.1],1));
+  s('ov-surf','line-width',mw(['get','w'],1));
+  s('ov-mark-s','line-width',mw(0.2,0.7));
+  s('ov-mark-d','line-width',mw(0.2,0.7));
+  s('route-case','line-width',mw(5.5,6));
+  s('route','line-width',mw(3.6,4));
+  map.setLayoutProperty('ov-arrows','icon-size',mw(5/80));
+  map.setLayoutProperty('ov-dsign','icon-size',mw(10/75,0.5));
+  map.setLayoutProperty('ov-speed','icon-size',mw(11/75,0.42));
+  s('ed-sel-line','line-width',mw(['get','w'],8));
+  ['','-r','-y','-g'].forEach(sx=>map.setLayoutProperty('ov-sig'+sx,'icon-size',mw(9/70,0.3)));
+  map.setLayoutProperty('ov-sign','icon-size',mw(11/75,0.42));
+}
+
+function applyPalette(){
+  const P=PAL[mode], s=(l,p,v)=>map.getLayer(l)&&map.setPaintProperty(l,p,v);
+  s('bg','background-color',P.bg); s('landuse','fill-color',P.land); s('park','fill-color',P.park); s('landcover','fill-color',P.park);
+  s('water','fill-color',P.water); s('waterway','line-color',P.waterLine);
+  s('road-case','line-color',P.casing); s('road','line-color',['match',['get','class'],['minor','service'],P.roadMinor,P.road]);
+  s('road-center','line-color',P.mark); s('rail','line-color',P.rail);
+  s('ov-case','line-color',P.ovCase); s('ov-surf','line-color',P.ovSurf); s('ov-poly','fill-color',P.mark); s('ov-mark-s','line-color',P.mark); s('ov-mark-d','line-color',P.mark);
+  s('route-case','line-color',P.routeCase); s('route','line-color',P.route);
+  s('bld','fill-extrusion-color',bldColor(P)); s('ed-bld','fill-extrusion-color',bldColor(P)); s('b3','fill-extrusion-color',bldColor(P));
+  s('road-label','text-color',P.label); s('road-label','text-halo-color',P.halo); s('place','text-color',P.place); s('place','text-halo-color',P.halo);
+  try{ map.setSky({'sky-color':P.sky,'horizon-color':P.horizon,'fog-color':P.fog,'sky-horizon-blend':0.6,'horizon-fog-blend':0.5,'fog-ground-blend':0.6,'atmosphere-blend':0.6}); }catch(e){}
+}
+
+/* ============ harita ============ */
+const map=new maplibregl.Map({container:'map',style:buildStyle(PAL[mode]),center:START,zoom:16.4,pitch:58,bearing:-28,maxPitch:70,minZoom:12.5,maxBounds:[[AREA.w-0.04,AREA.s-0.025],[AREA.e+0.04,AREA.n+0.025]],pixelRatio:Math.min(devicePixelRatio||1,2),fadeDuration:0,attributionControl:false,antialias:true});
+map.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+
+/* ============ simge çizimleri ============ */
+const ARRL={
+  through:[['M',50,96],['L',50,26]],
+  left:[['M',50,96],['L',50,60],['Q',50,40,30,40],['L',26,40]],
+  slight_left:[['M',50,96],['L',50,64],['Q',50,46,33,30]],
+  sharp_left:[['M',50,96],['L',50,44],['Q',50,34,41,46],['L',33,58]],
+  reverse:[['M',50,96],['L',50,48],['Q',50,28,37,28],['Q',26,28,26,46],['L',26,58]]
+};
+function arrCmds(d){
+  if(ARRL[d]) return ARRL[d];
+  const b=ARRL[d.replace('right','left')]||ARRL.through;
+  return b.map(c=>c[0]==='Q'?['Q',100-c[1],c[2],100-c[3],c[4]]:[c[0],100-c[1],c[2]]);
+}
+function normDir(s){
+  s=(s||'').trim().toLowerCase().replace(/ /g,'_');
+  const m={straight:'through',uturn:'reverse',merge_to_left:'slight_left',merge_to_right:'slight_right',none:'through','':'through'};
+  if(m[s]!==undefined) return m[s];
+  return ['through','left','right','slight_left','slight_right','sharp_left','sharp_right','reverse'].includes(s)?s:'through';
+}
+const combo=v=>[...new Set(v.split(';').map(normDir))].sort().join(';');
+function headPts(p,e,sz=1){
+  let dx=e[0]-p[0],dy=e[1]-p[1]; const l=Math.hypot(dx,dy)||1; dx/=l; dy/=l;
+  return [[e[0]+dx*13*sz,e[1]+dy*13*sz],[e[0]-dy*10*sz,e[1]+dx*10*sz],[e[0]+dy*10*sz,e[1]-dx*10*sz]];
+}
+function walk(cmds,cb){ let prev=null,last=null; for(const c of cmds){ if(c[0]==='Q'){cb(c);prev=[c[1],c[2]];last=[c[3],c[4]];} else {cb(c);prev=last;last=[c[1],c[2]];} } return [prev,last]; }
+function arrowSVG(dirs,color,sw=9){
+  let s='';
+  for(const d of dirs){
+    let path=''; const [p,e]=walk(arrCmds(d),c=>{ path+=c[0]==='Q'?`Q${c[1]} ${c[2]} ${c[3]} ${c[4]}`:`${c[0]}${c[1]} ${c[2]}`; });
+    s+=`<path d="${path}" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linejoin="round"/><polygon points="${headPts(p,e).map(q=>q.map(v=>v.toFixed(1)).join(',')).join(' ')}" fill="${color}"/>`;
+  }
+  return s;
+}
+function canvas(w,h){ const c=document.createElement('canvas'); c.width=w; c.height=h; return [c,c.getContext('2d')]; }
+function addArrowImg(id){
+  const dirs=id.slice(4).split(';'); const [c,x]=canvas(64,160);
+  x.scale(64/100,160/100); x.fillStyle=x.strokeStyle='rgba(255,255,255,0.92)'; x.lineWidth=9; x.lineJoin='round';
+  for(const d of dirs){
+    x.beginPath(); const [p,e]=walk(arrCmds(d),cm=>{ if(cm[0]==='M')x.moveTo(cm[1],cm[2]); else if(cm[0]==='L')x.lineTo(cm[1],cm[2]); else x.quadraticCurveTo(cm[1],cm[2],cm[3],cm[4]); });
+    x.stroke(); const h=headPts(p,e); x.beginPath(); x.moveTo(...h[0]); x.lineTo(...h[1]); x.lineTo(...h[2]); x.closePath(); x.fill();
+  }
+  map.addImage(id,x.getImageData(0,0,64,160),{pixelRatio:2});
+}
+function addSpeedImg(id){
+  const c=signCanvas('speed',id.slice(3)); map.addImage(id,c.getContext('2d').getImageData(0,0,64,150),{pixelRatio:2});
+}
+function addSignalImgs(){
+  const lamps={r:'#ff3b30',y:'#ffbf1a',g:'#2fe07a'};
+  { const [c,x]=canvas(48,140);
+    x.fillStyle='#5c6570'; x.fillRect(21,52,6,88);
+    x.fillStyle='#161b22'; x.strokeStyle='#3b4450'; x.lineWidth=2; x.beginPath(); x.roundRect(7,3,34,54,7); x.fill(); x.stroke();
+    [16,30,44].forEach(y=>{ x.beginPath(); x.arc(24,y,5.6,0,7); x.fillStyle='#2b3139'; x.fill(); });
+    map.addImage('tl-base',x.getImageData(0,0,48,140),{pixelRatio:2}); }
+  for(const [k,y] of [['r',16],['y',30],['g',44]]){
+    const [c,x]=canvas(48,140); x.shadowColor=lamps[k]; x.shadowBlur=14;
+    x.beginPath(); x.arc(24,y,5.6,0,7); x.fillStyle=lamps[k]; x.fill();
+    map.addImage('tl-'+k,x.getImageData(0,0,48,140),{pixelRatio:2});
+  }
+  // DUR ve Yol Ver levhaları
+  let [c,x]=canvas(64,150); x.fillStyle='#7d8794'; x.fillRect(29,60,6,90);
+  x.beginPath(); for(let i=0;i<8;i++){ const a=Math.PI/8+i*Math.PI/4; x.lineTo(32+28*Math.cos(a),32+28*Math.sin(a)); } x.closePath(); x.fillStyle='#d42a2a'; x.fill(); x.lineWidth=3; x.strokeStyle='#fff'; x.stroke();
+  x.fillStyle='#fff'; x.font='700 17px "Barlow Semi Condensed", Arial'; x.textAlign='center'; x.textBaseline='middle'; x.fillText('DUR',32,33);
+  map.addImage('stop',x.getImageData(0,0,64,150),{pixelRatio:2});
+  [c,x]=canvas(64,150); x.fillStyle='#7d8794'; x.fillRect(29,50,6,100);
+  x.beginPath(); x.moveTo(4,6); x.lineTo(60,6); x.lineTo(32,54); x.closePath(); x.fillStyle='#fff'; x.fill(); x.lineWidth=7; x.strokeStyle='#d42a2a'; x.lineJoin='round'; x.stroke();
+  map.addImage('yield',x.getImageData(0,0,64,150),{pixelRatio:2});
+  // araç
+  [c,x]=canvas(96,96); x.shadowColor='rgba(0,0,0,.45)'; x.shadowBlur=10; x.shadowOffsetY=3;
+  x.beginPath(); x.moveTo(48,8); x.lineTo(80,84); x.lineTo(48,66); x.lineTo(16,84); x.closePath();
+  x.fillStyle='#2b8fff'; x.fill(); x.shadowColor='transparent'; x.lineWidth=6; x.strokeStyle='#fff'; x.lineJoin='round'; x.stroke();
+  map.addImage('car',x.getImageData(0,0,96,96),{pixelRatio:2});
+  [c,x]=canvas(32,32); x.lineWidth=6; x.lineJoin='round'; x.lineCap='round'; x.strokeStyle='#0b3a66'; x.beginPath(); x.moveTo(10,7); x.lineTo(22,16); x.lineTo(10,25); x.stroke();
+  x.lineWidth=3.2; x.strokeStyle='#ffffff'; x.stroke();
+  map.addImage('ed-chev',x.getImageData(0,0,32,32),{pixelRatio:2});
+}
+const SIGNS=[['speed','Hız sınırı'],['stop','DUR'],['yield','Yol ver'],['no_entry','Girilmez'],['no_parking','Park yapılmaz'],['no_stopping','Duraklama ve park yasak'],
+  ['no_left','Sola dönülmez'],['no_right','Sağa dönülmez'],['no_uturn','U dönüşü yasak'],['ahead','İleri mecburi yön'],['turn_right','Sağa mecburi yön'],['turn_left','Sola mecburi yön'],
+  ['roundabout','Ada etrafında dönünüz'],['ped','Yaya geçidi'],['school','Okul geçidi'],['bump','Kasis'],['parking','Park yeri'],
+  ['warn','Dikkat'],['curve_left','Sola tehlikeli viraj'],['curve_right','Sağa tehlikeli viraj'],['ped_warn','Yaya geçidi uyarısı'],['works','Yol çalışması'],
+  ['slippery','Kaygan yol'],['animal','Hayvan geçebilir'],['rail','Hemzemin geçit'],['camera','Hız kamerası']];
+const SIGN_TR=Object.fromEntries(SIGNS);
+function signCanvas(type,val){
+  const [c,x]=canvas(64,150);
+  x.fillStyle='#7d8794'; x.fillRect(29,56,6,94);
+  const R='#d42a2a',B='#1d5fbf',W='#ffffff',K='#151515';
+  x.lineJoin='round'; x.lineCap='round';
+  const circ=(fill,ring)=>{ x.beginPath(); x.arc(32,30,28,0,7); x.fillStyle=ring?W:fill; x.fill(); if(ring){ x.beginPath(); x.arc(32,30,21.5,0,7); x.fillStyle=fill; x.fill(); x.lineWidth=7; x.strokeStyle=ring; x.beginPath(); x.arc(32,30,24.5,0,7); x.stroke(); } x.lineWidth=1.2; x.strokeStyle='rgba(0,0,0,.35)'; x.beginPath(); x.arc(32,30,28.3,0,7); x.stroke(); };
+  const tri=()=>{ x.beginPath(); x.moveTo(32,4); x.lineTo(60,54); x.lineTo(4,54); x.closePath(); x.fillStyle=W; x.fill(); x.lineWidth=6; x.strokeStyle=R; x.stroke(); };
+  const sq=fill=>{ x.fillStyle=fill; x.beginPath(); x.roundRect(4,2,56,56,6); x.fill(); x.lineWidth=2; x.strokeStyle=W; x.beginPath(); x.roundRect(7,5,50,50,4); x.stroke(); };
+  const slash=(back)=>{ x.strokeStyle=R; x.lineWidth=6; x.beginPath(); if(back){ x.moveTo(48,13); x.lineTo(16,47); } else { x.moveTo(16,13); x.lineTo(48,47); } x.stroke(); };
+  const txt=(t,size,col,y=31)=>{ x.fillStyle=col; x.font=`700 ${size}px "Barlow Semi Condensed", Arial, sans-serif`; x.textAlign='center'; x.textBaseline='middle'; x.fillText(t,32,y); };
+  const arr=(dir,col,sc=0.38,cy=30)=>{
+    x.save(); x.translate(32-50*sc,cy-58*sc); x.scale(sc,sc); x.strokeStyle=x.fillStyle=col; x.lineWidth=13;
+    x.beginPath(); const [pp,e]=walk(arrCmds(dir),cm=>{ if(cm[0]==='M')x.moveTo(cm[1],cm[2]); else if(cm[0]==='L')x.lineTo(cm[1],cm[2]); else x.quadraticCurveTo(cm[1],cm[2],cm[3],cm[4]); });
+    x.stroke(); const h=headPts(pp,e,1.4); x.beginPath(); x.moveTo(...h[0]); x.lineTo(...h[1]); x.lineTo(...h[2]); x.closePath(); x.fill(); x.restore(); };
+  const person=(cx,cy,s=1,col=K)=>{ x.save(); x.translate(cx,cy); x.scale(s,s); x.fillStyle=x.strokeStyle=col; x.lineWidth=3.2;
+    x.beginPath(); x.arc(1,-13,3.2,0,7); x.fill(); x.beginPath(); x.moveTo(0,-8); x.lineTo(-2,3); x.lineTo(-7,12); x.moveTo(-2,3); x.lineTo(4,12); x.moveTo(-6,-3); x.lineTo(0,-7); x.lineTo(6,-2); x.stroke(); x.restore(); };
+  switch(type){
+    case 'speed': { const v=String(val||50); circ(W,R); txt(v,v.length>2?21:26,K); break; }
+    case 'stop': x.beginPath(); for(let i=0;i<8;i++){ const a=Math.PI/8+i*Math.PI/4; x.lineTo(32+28*Math.cos(a),30+28*Math.sin(a)); } x.closePath(); x.fillStyle=R; x.fill(); x.lineWidth=2.5; x.strokeStyle=W; x.stroke(); txt('DUR',18,W); break;
+    case 'yield': x.beginPath(); x.moveTo(4,5); x.lineTo(60,5); x.lineTo(32,55); x.closePath(); x.fillStyle=W; x.fill(); x.lineWidth=7; x.strokeStyle=R; x.stroke(); break;
+    case 'no_entry': circ(R); x.fillStyle=W; x.fillRect(12,25,40,10); break;
+    case 'no_parking': circ(B,R); slash(); break;
+    case 'no_stopping': circ(B,R); slash(); slash(true); break;
+    case 'no_left': circ(W,R); arr('left',K,0.34); slash(); break;
+    case 'no_right': circ(W,R); arr('right',K,0.34); slash(true); break;
+    case 'no_uturn': circ(W,R); arr('reverse',K,0.34); slash(); break;
+    case 'ahead': circ(B); arr('through',W); break;
+    case 'turn_right': circ(B); arr('right',W); break;
+    case 'turn_left': circ(B); arr('left',W); break;
+    case 'roundabout': circ(B); x.strokeStyle=x.fillStyle=W; x.lineWidth=4.5;
+      for(let k=0;k<3;k++){ const a0=k*2.094-1.4, a1=a0+1.45; x.beginPath(); x.arc(32,30,14,a0,a1); x.stroke();
+        const ex=32+14*Math.cos(a1), ey=30+14*Math.sin(a1), tx=-Math.sin(a1), ty=Math.cos(a1);
+        x.beginPath(); x.moveTo(ex+tx*7,ey+ty*7); x.lineTo(ex-ty*5.5,ey+tx*5.5); x.lineTo(ex+ty*5.5,ey-tx*5.5); x.closePath(); x.fill(); } break;
+    case 'ped': sq(B); x.beginPath(); x.moveTo(32,10); x.lineTo(53,50); x.lineTo(11,50); x.closePath(); x.fillStyle=W; x.fill(); person(31,36,0.95); x.fillStyle=K; for(let i=0;i<4;i++) x.fillRect(16+i*9,47,5,2.5); break;
+    case 'school': tri(); person(26,40,0.85); person(39,41,0.7); break;
+    case 'bump': tri(); x.strokeStyle=K; x.lineWidth=4.5; x.beginPath(); x.moveTo(14,46); x.quadraticCurveTo(32,20,50,46); x.stroke(); x.fillStyle=K; x.fillRect(12,46,40,3); break;
+    case 'parking': sq(B); txt('P',42,W,31); break;
+    case 'warn': tri(); x.fillStyle=K; x.fillRect(29.5,22,5,17); x.beginPath(); x.arc(32,45,3,0,7); x.fill(); break;
+    case 'curve_left': case 'curve_right': { tri(); x.save(); if(type==='curve_right'){ x.translate(64,0); x.scale(-1,1); }
+      x.strokeStyle=x.fillStyle=K; x.lineWidth=4.5; x.beginPath(); x.moveTo(36,48); x.lineTo(36,34); x.quadraticCurveTo(36,26,27,26); x.stroke();
+      x.beginPath(); x.moveTo(21,26); x.lineTo(28,20); x.lineTo(28,32); x.closePath(); x.fill(); x.restore(); break; }
+    case 'ped_warn': tri(); person(32,40,0.95); break;
+    case 'works': tri(); person(28,40,0.85); x.fillStyle=K; x.beginPath(); x.moveTo(36,48); x.lineTo(48,48); x.lineTo(42,38); x.closePath(); x.fill(); break;
+    case 'slippery': tri(); x.fillStyle=K; x.beginPath(); x.roundRect(24,24,16,9,3); x.fill(); x.fillRect(23,32,18,4);
+      x.strokeStyle=K; x.lineWidth=2.4; x.beginPath(); x.moveTo(22,48); x.bezierCurveTo(28,40,20,42,28,36); x.moveTo(42,48); x.bezierCurveTo(36,40,44,42,36,36); x.stroke(); break;
+    case 'animal': tri(); x.fillStyle=K; x.beginPath(); x.ellipse(31,38,10,5,0,0,7); x.fill(); x.fillRect(22,38,2.5,10); x.fillRect(37,38,2.5,10);
+      x.beginPath(); x.moveTo(39,36); x.lineTo(44,26); x.lineTo(47,28); x.lineTo(42,38); x.closePath(); x.fill(); break;
+    case 'rail': tri(); x.strokeStyle=K; x.lineWidth=3; for(const y of [30,38,46]){ x.beginPath(); x.moveTo(20,y); x.lineTo(44,y); x.stroke(); }
+      x.lineWidth=2.5; x.beginPath(); x.moveTo(26,26); x.lineTo(26,49); x.moveTo(38,26); x.lineTo(38,49); x.stroke(); break;
+    case 'camera': sq(B); x.fillStyle=W; x.beginPath(); x.roundRect(14,22,30,18,3); x.fill(); x.beginPath(); x.moveTo(44,27); x.lineTo(52,23); x.lineTo(52,39); x.lineTo(44,35); x.closePath(); x.fill();
+      x.fillStyle=B; x.beginPath(); x.arc(24,31,5,0,7); x.fill(); x.fillStyle=W; x.fillRect(27,40,4,9); break;
+    default: circ(W,R);
+  }
+  return c;
+}
+function addSignImg(id){ const t=id.slice(3); const c=signCanvas(t); map.addImage(id,c.getContext('2d').getImageData(0,0,64,150),{pixelRatio:2}); }
+const signURLs=new Map();
+function signURL(t){ if(!signURLs.has(t)){ const c=signCanvas(t,50), [d,x]=canvas(64,60); x.drawImage(c,0,0); signURLs.set(t,d.toDataURL()); } return signURLs.get(t); }
+function addDirImg(id){
+  const txt=decodeURIComponent(id.slice(id.indexOf(':')+1)); const [c0,m]=canvas(10,10); m.font='700 30px "Barlow Semi Condensed", Arial, sans-serif';
+  const w=Math.ceil(Math.max(90,m.measureText(txt).width+44)); const [c,x]=canvas(w,170);
+  x.fillStyle='#7d8794'; x.fillRect(w/2-4,70,8,100);
+  x.fillStyle=id.startsWith('dirg:')?'#1b7445':'#1c5bb8'; x.strokeStyle='#fff'; x.lineWidth=4; x.beginPath(); x.roundRect(3,3,w-6,68,8); x.fill(); x.stroke();
+  x.fillStyle='#fff'; x.font='700 30px "Barlow Semi Condensed", Arial, sans-serif'; x.textAlign='center'; x.textBaseline='middle'; x.fillText(txt,w/2,38);
+  map.addImage(id,x.getImageData(0,0,w,170),{pixelRatio:2});
+}
+map.on('styleimagemissing',e=>{
+  if(map.hasImage(e.id)) return;
+  if(e.id.startsWith('arr:')) addArrowImg(e.id); else if(e.id.startsWith('sl:')) addSpeedImg(e.id); else if(e.id.startsWith('dir:')||e.id.startsWith('dirg:')) addDirImg(e.id); else if(e.id.startsWith('sg:')) addSignImg(e.id);
+  else if(e.id.startsWith('ab:')){ const c=badgeCanvas(e.id.slice(3)); map.addImage(e.id,c.getContext('2d').getImageData(0,0,64,64),{pixelRatio:2}); }
+});
+/* uyarı rozeti: levhanın üst kısmı, ışık için küçük lamba */
+function badgeCanvas(kind){
+  const [c,x]=canvas(64,64);
+  if(kind==='signal'){
+    x.fillStyle='#161b22'; x.strokeStyle='#fff'; x.lineWidth=3; x.beginPath(); x.roundRect(18,2,28,60,8); x.fill(); x.stroke();
+    [['#ff3b30',15],['#ffbf1a',32],['#2fe07a',49]].forEach(([col,y])=>{ x.beginPath(); x.arc(32,y,6.5,0,7); x.fillStyle=col; x.fill(); });
+  } else x.drawImage(signCanvas(ALERT_KIND[kind]?ALERT_KIND[kind][1]:'warn'),0,2,64,62,0,0,64,62);
+  return c;
+}
+const badgeURLs=new Map();
+const badgeURL=k=>{ if(!badgeURLs.has(k)) badgeURLs.set(k,badgeCanvas(k).toDataURL()); return badgeURLs.get(k); };
+
+/* ============ geometri yardımcıları (yerel metre düzlemi) ============ */
+function proj(c){
+  const o=c[0], kx=111320*Math.cos(o[1]*DEG), ky=110574;
+  return {pts:c.map(p=>[(p[0]-o[0])*kx,(p[1]-o[1])*ky]),back:(x,y)=>[o[0]+x/kx,o[1]+y/ky],fwd:p=>[(p[0]-o[0])*kx,(p[1]-o[1])*ky]};
+}
+const nrm=(a,b)=>{const dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy)||1;return [dy/l,-dx/l];};
+function offsetPts(P,off){
+  if(!off) return P;
+  const n=P.length,out=[];
+  for(let i=0;i<n;i++){
+    let n1=i>0?nrm(P[i-1],P[i]):nrm(P[0],P[1]), n2=i<n-1?nrm(P[i],P[i+1]):n1;
+    let nx=n1[0]+n2[0],ny=n1[1]+n2[1]; const l=Math.hypot(nx,ny)||1; nx/=l; ny/=l;
+    const s=1/Math.max(nx*n1[0]+ny*n1[1],0.4);
+    out.push([P[i][0]+nx*off*s,P[i][1]+ny*off*s]);
+  }
+  return out;
+}
+function cum(P){ const c=[0]; for(let i=1;i<P.length;i++) c.push(c[i-1]+Math.hypot(P[i][0]-P[i-1][0],P[i][1]-P[i-1][1])); return c; }
+function along(P,C,d){
+  d=Math.max(0,Math.min(C[C.length-1],d)); let i=1; while(i<C.length-1&&C[i]<d) i++;
+  const a=P[i-1],b=P[i],seg=(C[i]-C[i-1])||1,t=(d-C[i-1])/seg;
+  return {p:[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t],ang:Math.atan2(b[0]-a[0],b[1]-a[1])};
+}
+function rectXY(a,a0,a1,c0,c1){
+  const dx=Math.sin(a.ang),dy=Math.cos(a.ang),rx=dy,ry=-dx;
+  return [[a0,c0],[a1,c0],[a1,c1],[a0,c1],[a0,c0]].map(([u,v])=>[a.p[0]+dx*u+rx*v,a.p[1]+dy*u+ry*v]);
+}
+const feat=(type,coordinates,properties={})=>({type:'Feature',geometry:{type,coordinates},properties});
+
+/* ============ OSM şerit verisi (Overpass) ============ */
+const ROADW={motorway:3.6,trunk:3.5,primary:3.3,secondary:3.2,tertiary:3.1,unclassified:3.0,residential:2.9,living_street:2.8};
+const F={surf:[],mark:[],poly:[],pts:[],hit:[]};
+const ways=new Map(), nodeIdx=new Map();
+const RAW={ways:new Map(),nodes:new Map()};   // Overpass'tan gelen ham veri — hiç değiştirilmez
+const stats={ways:0,sig:0,cross:0,arr:0,warn:0,dir:0};
+
+/* ---- uyarılar: tür → [ad, levha, uyarı mesafesi (m)] ---- */
+const ALERT_KIND={
+  signal:['Trafik ışığı','warn',250], crossing:['Yaya geçidi','ped',200], school:['Okul geçidi','school',300], camera:['Hız kamerası','camera',500],
+  bump:['Kasis','bump',200], rail:['Hemzemin geçit','rail',400], stop:['DUR levhası','stop',200], yield:['Yol ver','yield',200],
+  curve_left:['Sola tehlikeli viraj','curve_left',250], curve_right:['Sağa tehlikeli viraj','curve_right',250], ped_warn:['Yaya geçidi','ped_warn',200],
+  works:['Yol çalışması','works',300], slippery:['Kaygan yol','slippery',250], animal:['Hayvan geçebilir','animal',250], warn:['Dikkat','warn',250]
+};
+const SIGN_ALERT={ped:'crossing',school:'school',bump:'bump',stop:'stop',yield:'yield',warn:'warn',curve_left:'curve_left',curve_right:'curve_right',ped_warn:'ped_warn',works:'works',slippery:'slippery',animal:'animal',rail:'rail',camera:'camera'};
+const HAZARD={school_zone:'school',children:'school',curve:'curve_right',curves:'curve_right',dangerous_curve:'curve_right',left_curve:'curve_left',right_curve:'curve_right',
+  slippery:'slippery',ice:'slippery',animal_crossing:'animal',deer:'animal',cattle:'animal',roadworks:'works',pedestrians:'ped_warn',level_crossing:'rail',bump:'bump',hump:'bump'};
+const ALERTS=[];
+function alertOf(t){
+  const hw=t.highway;
+  if(hw==='traffic_signals') return 'signal';
+  if(hw==='speed_camera'||t.enforcement==='maxspeed') return 'camera';
+  if(hw==='crossing') return ['unmarked','no'].includes(t.crossing)?null:(t.crossing_ref==='school'||t.supervised==='yes'?'school':'crossing');
+  if(hw==='stop') return 'stop';
+  if(hw==='give_way') return 'yield';
+  if(hw==='sign') return SIGN_ALERT[t.sign]||null;
+  if(t.railway==='level_crossing') return 'rail';
+  if(t.traffic_calming&&!['no','island','chicane','choker'].includes(t.traffic_calming)) return 'bump';
+  if(t.hazard) return HAZARD[t.hazard]||'warn';
+  const ts=t.traffic_sign||'';
+  if(/hazard|danger|TR:T-?\d|warning/i.test(ts)) return /children|school/i.test(ts)?'school':'warn';
+  return null;
+}
+const alertSign=k=>(ALERT_KIND[k]||ALERT_KIND.warn)[1];
+
+function processWay(w){
+  if(ways.has(w.id)||!w.geometry||!w.tags) return;
+  const t=w.tags, hw=t.highway, base=hw.replace('_link','');
+  let coords=w.geometry.map(g=>[g.lon,g.lat]), nodes=(w.nodes||[]).slice();
+  let oneway=['yes','1','true'].includes(t.oneway)||['roundabout','circular'].includes(t.junction)||base==='motorway';
+  if(t.oneway==='-1'){ oneway=true; coords.reverse(); nodes.reverse(); }
+  if(t.oneway==='no') oneway=false;
+  const isLink=hw.endsWith('_link'), tagged=!!t.lanes;
+  let L=parseInt(t.lanes)||0, fwd, bwd;
+  if(oneway){ const tl=t['turn:lanes']; L=L||(tl?tl.split('|').length:0)||(isLink?1:2); fwd=L; bwd=0; }
+  else{
+    fwd=parseInt(t['lanes:forward'])||0; bwd=parseInt(t['lanes:backward'])||0;
+    if(!fwd&&t['turn:lanes:forward']) fwd=t['turn:lanes:forward'].split('|').length;
+    if(!bwd&&t['turn:lanes:backward']) bwd=t['turn:lanes:backward'].split('|').length;
+    if(!L) L=(fwd&&bwd)?fwd+bwd:2;
+    if(!fwd&&!bwd){ fwd=Math.ceil(L/2); bwd=Math.max(1,L-fwd); }
+    else if(!fwd) fwd=Math.max(1,L-bwd); else if(!bwd) bwd=Math.max(1,L-fwd);
+    L=fwd+bwd;
+  }
+  const W=ROADW[base]||3.0, lo=oneway?-L*W/2:-bwd*W, hi=oneway?L*W/2:fwd*W;
+  const pr=proj(coords), P=pr.pts, C=cum(P);
+  if(C[C.length-1]<1) return;
+  const LL=pts=>pts.map(p=>pr.back(p[0],p[1]));
+  let bb=[Infinity,Infinity,-Infinity,-Infinity]; for(const q of P){ bb[0]=Math.min(bb[0],q[0]); bb[1]=Math.min(bb[1],q[1]); bb[2]=Math.max(bb[2],q[0]); bb[3]=Math.max(bb[3],q[1]); }
+  const info={id:w.id,t,hw,base,oneway,fwd,bwd,L,W,lo,hi,pr,P,C,nodes,bb};
+  ways.set(w.id,info); stats.ways++;
+  nodes.forEach((nid,i)=>{ let a=nodeIdx.get(nid); if(!a){a=[];nodeIdx.set(nid,a);} a.push([info,i]); });
+
+  F.surf.push(feat('LineString',LL(offsetPts(P,(lo+hi)/2)),{w:hi-lo+0.5,id:w.id}));
+
+  if(tagged||['motorway','trunk','primary','secondary','tertiary'].includes(base)){
+    const add=(o,ty)=>F.mark.push(feat('LineString',LL(offsetPts(P,o)),{t:ty}));
+    add(lo+0.3,'s'); add(hi-0.3,'s');
+    if(oneway){ for(let k=1;k<L;k++) add(lo+k*W,'d'); }
+    else{
+      if(L>=4){ add(-0.13,'s'); add(0.13,'s'); } else add(0,L>=3?'s':'d');
+      for(let k=1;k<fwd;k++) add(k*W,'d');
+      for(let k=1;k<bwd;k++) add(-k*W,'d');
+    }
+  }
+  // dönüş okları (turn:lanes)
+  const arrows=(tl,pts,off)=>{
+    const lanes=tl.split('|'), n=lanes.length;
+    lanes.forEach((v,i)=>{
+      if(!v||v==='none') return;
+      const op=offsetPts(pts,off(i,n)), oc=cum(op), len=oc[oc.length-1];
+      if(len<22) return;
+      const ds=[len-15]; if(len>85) ds.push(len-48);
+      for(const d of ds){ const a=along(op,oc,d); F.pts.push(feat('Point',pr.back(a.p[0],a.p[1]),{k:'arr',icon:'arr:'+combo(v),rot:a.ang/DEG})); stats.arr++; }
+    });
+  };
+  if(oneway&&t['turn:lanes']) arrows(t['turn:lanes'],P,(i,n)=>-n*W/2+(i+0.5)*W);
+  if(!oneway){
+    if(t['turn:lanes:forward']) arrows(t['turn:lanes:forward'],P,i=>(i+0.5)*W);
+    if(t['turn:lanes:backward']) arrows(t['turn:lanes:backward'],P.slice().reverse(),i=>(i+0.5)*W);
+  }
+  // hız sınırı levhası
+  const ms=parseInt(t.maxspeed);
+  if(ms&&C[C.length-1]>60){ const a=along(P,C,C[C.length-1]*0.35); const r=[Math.cos(a.ang),-Math.sin(a.ang)]; F.pts.push(feat('Point',pr.back(a.p[0]+r[0]*(hi+1.6),a.p[1]+r[1]*(hi+1.6)),{k:'sl',icon:'sl:'+ms})); }
+  // yön tabelası (OSM destination etiketleri): yolun başına, sağ kenara
+  const dt=dirText(t,oneway?'':':forward');
+  if(dt&&C[C.length-1]>25){
+    const a=along(P,C,Math.min(14,C[C.length-1]*0.3)), r=[Math.cos(a.ang),-Math.sin(a.ang)];
+    F.pts.push(feat('Point',pr.back(a.p[0]+r[0]*(hi+2.2),a.p[1]+r[1]*(hi+2.2)),{k:'dsign',icon:dirIcon(dt,base)})); stats.dir++;
+  }
+  if(!oneway){ const db=dirText(t,':backward'); if(db&&C[C.length-1]>25){
+    const a=along(P,C,Math.max(0,C[C.length-1]-14)), r=[Math.cos(a.ang),-Math.sin(a.ang)];
+    F.pts.push(feat('Point',pr.back(a.p[0]-r[0]*(-lo+2.2),a.p[1]-r[1]*(-lo+2.2)),{k:'dsign',icon:dirIcon(db,base)})); stats.dir++; } }
+}
+function dirText(t,sfx){
+  const d=t['destination'+sfx]||(sfx===':forward'?t.destination:''), ref=t['destination:ref'+sfx]||(sfx===':forward'?t['destination:ref']:'');
+  if(!d&&!ref) return '';
+  return [ref&&ref.split(';')[0],d&&d.split(';').slice(0,2).join(' / ')].filter(Boolean).join(' · ');
+}
+const dirIcon=(txt,base)=>(['motorway','trunk'].includes(base)||/\bO-\d/.test(txt)?'dirg:':'dir:')+encodeURIComponent(trunc(txt,30));
+
+function processNode(n){
+  if(!n.tags) return;
+  placeNode(n.id,n.tags,(nodeIdx.get(n.id)||[]).map(([w,i])=>[w,w.C[i],i>0,i<w.P.length-1]),[n.lon,n.lat]);
+}
+// ents: [[yol, yol boyunca konum (m), öncesi var mı, sonrası var mı]]
+function placeNode(id,tags,ents,ll){
+  const hw=tags.highway;
+  F.hit.push(feat('Point',ll,{nid:id,kind:hw}));
+  const ak=alertOf(tags);
+  if(ak) ALERTS.push({id,kind:ak,ll:ents.length?ents[0][0].pr.back(...along(ents[0][0].P,ents[0][0].C,ents[0][1]).p):ll});
+  const pt=(w,a,off)=>{ const r=[Math.cos(a.ang),-Math.sin(a.ang)]; return w.pr.back(a.p[0]+r[0]*off,a.p[1]+r[1]*off); };
+  const poly=(w,ring)=>F.poly.push(feat('Polygon',[ring.map(p=>w.pr.back(p[0],p[1]))]));
+  const ph=ang=>{ const d=((ang/DEG)%180+180)%180; return (d>=45&&d<135)?6:0; };
+  const side=(k,icon,off)=>{ if(!ents.length){ F.pts.push(feat('Point',ll,{k,icon})); return; } const [w,pos]=ents[0]; F.pts.push(feat('Point',pt(w,along(w.P,w.C,pos),w.hi+off),{k,icon})); };
+  if(hw==='traffic_signals'){
+    stats.sig++;
+    const dir=tags['traffic_signals:direction']||tags.direction;
+    if(!ents.length){ F.pts.push(feat('Point',ll,{k:'sig',off:0})); return; }
+    for(const [w,pos,bef,aft] of ents){
+      if(bef&&dir!=='backward'){
+        const a=along(w.P,w.C,Math.max(0,pos-4)); const s0=w.oneway?w.lo:0;
+        poly(w,rectXY(a,-0.25,0.25,s0+0.2,w.hi-0.2));
+        F.pts.push(feat('Point',pt(w,a,w.hi+1.0),{k:'sig',off:ph(a.ang)}));
+      }
+      if(aft&&!w.oneway&&dir!=='forward'){
+        const a=along(w.P,w.C,Math.min(w.C[w.C.length-1],pos+4));
+        poly(w,rectXY(a,-0.25,0.25,w.lo+0.2,-0.2));
+        F.pts.push(feat('Point',pt(w,a,w.lo-1.0),{k:'sig',off:ph(a.ang+Math.PI)}));
+      }
+    }
+  } else if(hw==='crossing'){
+    if(['unmarked','no'].includes(tags.crossing)||!ents.length) return;
+    const [w,pos]=ents[0]; const a=along(w.P,w.C,pos); stats.cross++;
+    for(let o=w.lo+0.4;o<w.hi-0.5;o+=1.1) poly(w,rectXY(a,-1.6,1.6,o,o+0.55));
+  } else if(hw==='stop'||hw==='give_way') side('sign',hw==='stop'?'sg:stop':'sg:yield',1.3);
+  else if(hw==='speed_sign') side('sign','sl:'+(parseInt(tags.maxspeed)||50),1.3);
+  else if(hw==='sign') side('sign',tags.sign==='speed'?'sl:'+(parseInt(tags.maxspeed)||50):'sg:'+(tags.sign||'no_entry'),1.3);
+  else if(hw==='dir_sign') side('dsign','dir:'+encodeURIComponent(String(tags.text||'Tabela').slice(0,24)),1.8);
+  else if(hw==='speed_camera') { stats.warn++; side('sign','sg:camera',1.3); }
+  else if(ak&&ak!=='signal'&&ak!=='crossing') { stats.warn++; side('sign','sg:'+alertSign(ak),1.3); }
+}
+function flush(){
+  const fc=f=>({type:'FeatureCollection',features:f});
+  map.getSource('ov-surf').setData(fc(F.surf)); map.getSource('ov-mark').setData(fc(F.mark));
+  map.getSource('ov-poly').setData(fc(F.poly)); map.getSource('ov-pts').setData(fc(F.pts)); map.getSource('ed-hit').setData(fc(F.hit));
+}
+
+/* ---- Etimesgut verisi: tek seferde indir, tarayıcıda sakla ---- */
+function wantCells(){}            // eski parça parça yükleyici kaldırıldı
+const BLD=new Map();              // OSM binaları (ham) — hiç değiştirilmez
+const DB_NAME='yolharita3b', DB_KEY='etimesgut-v2';   // v2: uyarı levhaları, kamera, kasis, hemzemin geçit
+let DATA_AT=0;
+function idbOpen(){ return new Promise((res,rej)=>{ const r=indexedDB.open(DB_NAME,1); r.onupgradeneeded=()=>r.result.createObjectStore('veri'); r.onsuccess=()=>res(r.result); r.onerror=()=>rej(r.error); }); }
+async function idbGet(k){ try{ const db=await idbOpen(); return await new Promise((res,rej)=>{ const q=db.transaction('veri').objectStore('veri').get(k); q.onsuccess=()=>res(q.result); q.onerror=()=>rej(q.error); }); }catch(e){ return null; } }
+async function idbSet(k,v){ try{ const db=await idbOpen(); await new Promise((res,rej)=>{ const tx=db.transaction('veri','readwrite'); tx.objectStore('veri').put(v,k); tx.oncomplete=res; tx.onerror=()=>rej(tx.error); }); return true; }catch(e){ return false; } }
+function areaParts(nx,ny){ const out=[], dx=(AREA.e-AREA.w)/nx, dy=(AREA.n-AREA.s)/ny; for(let j=0;j<ny;j++)for(let i=0;i<nx;i++) out.push([AREA.s+j*dy,AREA.w+i*dx,AREA.s+(j+1)*dy,AREA.w+(i+1)*dx].map(v=>v.toFixed(5)).join(',')); return out; }
+const HW_RE='^(motorway|trunk|primary|secondary|tertiary|unclassified|residential|living_street|motorway_link|trunk_link|primary_link|secondary_link|tertiary_link)$';
+const DEF_LV={house:2,detached:2,semidetached_house:2,terrace:2,bungalow:1,garage:1,garages:1,shed:1,hut:1,roof:1,carport:1,kiosk:1,container:1,service:1,transformer_tower:1,
+  apartments:5,residential:4,dormitory:4,hotel:5,commercial:3,office:4,retail:2,supermarket:1,industrial:1,warehouse:1,school:3,university:4,college:3,kindergarten:2,hospital:5,
+  mosque:1,religious:1,public:3,government:3,civic:3,train_station:1,construction:2,sports_hall:1,yes:3};
+const DEF_H={supermarket:7,industrial:8,warehouse:9,mosque:11,religious:9,sports_hall:9,train_station:7,roof:4};
+function bldBase(t){
+  const lv=parseInt(t['building:levels']), h=parseFloat(t.height), mh=parseFloat(t.min_height)||(parseInt(t['building:min_level'])||0)*FLOOR_H;
+  if(lv>0) return {lv,h:h||lv*FLOOR_H+(parseInt(t['roof:levels'])||0)*FLOOR_H*0.6,mh,est:0};
+  if(h>0) return {lv:Math.max(1,Math.round(h/FLOOR_H)),h,mh,est:0};
+  const d=DEF_LV[t.building]||3; return {lv:d,h:DEF_H[t.building]||d*FLOOR_H,mh,est:1};
+}
+const r6=v=>Math.round(v*1e6)/1e6;
+function compactBld(el){
+  const t=el.tags||{}; let polys=[];
+  if(el.type==='way'&&el.geometry&&el.geometry.length>3) polys=[[el.geometry.map(g=>[r6(g.lon),r6(g.lat)])]];
+  else if(el.type==='relation'&&el.members){
+    const outer=[], inner=[];
+    for(const m of el.members){ if(m.type!=='way'||!m.geometry||m.geometry.length<4) continue; const ring=m.geometry.map(g=>[r6(g.lon),r6(g.lat)]); const a=ring[0],b=ring[ring.length-1]; if(a[0]!==b[0]||a[1]!==b[1]) continue; (m.role==='inner'?inner:outer).push(ring); }
+    polys=outer.map((o,i)=>i===0?[o,...inner]:[o]);
+  }
+  if(!polys.length) return null;
+  const b=bldBase(t);
+  return {id:el.type==='relation'?2e12+el.id:el.id,g:polys,lv:b.lv,h:+b.h.toFixed(1),mh:b.mh||0,est:b.est,t:t.building||'yes',n:t.name||t['addr:housenumber']&&((t['addr:street']||'')+' No:'+t['addr:housenumber'])||''};
+}
+const loadParts=new Map();
+async function overpassRetry(q,label){
+  let err;
+  for(let k=0;k<3;k++){ try{ return await overpass(q,90000); }catch(e){ err=e; setLoad(`${label} · yeniden deneniyor (${k+2}/3)…`); await new Promise(r=>setTimeout(r,2500*(k+1))); } }
+  throw err;
+}
+async function loadArea(force){
+  showLoad(true,false);
+  if(!force){
+    const d=await idbGet(DB_KEY);
+    if(d&&d.v===1&&d.roads&&d.roads.length){ ingest(d); showLoad(false); return; }
+  } else loadParts.clear();
+  const rp=areaParts(2,2).map(b=>['y'+b,`[out:json][timeout:80];(way["highway"~"${HW_RE}"](${b});node["highway"~"^(traffic_signals|stop|give_way|crossing|speed_camera)$"](${b});node["traffic_sign"](${b});node["hazard"](${b});node["traffic_calming"](${b});node["railway"="level_crossing"](${b}););out body geom;`,'Yollar']);
+  const bp=areaParts(3,3).map(b=>['b'+b,`[out:json][timeout:90];(way["building"](${b});relation["building"]["type"="multipolygon"](${b}););out geom;`,'Binalar']);
+  const all=[...rp,...bp]; let i=0;
+  try{
+    for(const [k,q,label] of all){
+      i++;
+      setLoad(`${label} indiriliyor · ${i}/${all.length}`,(i-1)/all.length);
+      if(!loadParts.has(k)) loadParts.set(k,(await overpassRetry(q,label)).elements||[]);
+    }
+  }catch(e){ setLoad('OSM sunucuları şu an yanıt vermiyor. İndirilen parçalar duruyor; tekrar denersen kaldığı yerden devam eder.',(i-1)/all.length,true); return; }
+  setLoad('Hazırlanıyor…',1);
+  const roads=new Map(), nodes=new Map(), blds=new Map();
+  for(const [k,els] of loadParts){
+    for(const x of els){
+      if(k[0]==='y'){ if(x.type==='way'&&x.tags&&x.geometry) roads.set(x.id,{type:'way',id:x.id,nodes:x.nodes,tags:x.tags,geometry:x.geometry.map(g=>({lat:r6(g.lat),lon:r6(g.lon)}))}); else if(x.type==='node'&&x.tags) nodes.set(x.id,{type:'node',id:x.id,lat:x.lat,lon:x.lon,tags:x.tags}); }
+      else { const id=x.type==='relation'?2e12+x.id:x.id; if(!blds.has(id)){ const c=compactBld(x); if(c) blds.set(id,c); } }
+    }
+  }
+  const d={v:1,at:Date.now(),roads:[...roads.values()],nodes:[...nodes.values()],blds:[...blds.values()]};
+  const saved=await idbSet(DB_KEY,d);
+  loadParts.clear(); ingest(d); showLoad(false);
+  toast(saved?`Etimesgut indirildi ve kaydedildi · ${d.roads.length} yol, ${d.blds.length} bina`:'Veri indirildi ama tarayıcı saklamaya izin vermedi; bir dahaki açılışta yeniden indirilecek.',4500);
+}
+function ingest(d){
+  RAW.ways.clear(); RAW.nodes.clear(); BLD.clear();
+  for(const w of d.roads) RAW.ways.set(w.id,w);
+  for(const n of d.nodes) RAW.nodes.set(n.id,n);
+  for(const b of d.blds) BLD.set(b.id,b);
+  DATA_AT=d.at||0;
+  if(BLD.size) try{ map.setLayoutProperty('bld','visibility','none'); }catch(e){}
+  setBldData(); rebuild(); edInfo();
+}
+/* bina kaynağı: düzenlemeler yalnızca değişen binaya uygulanır */
+const bApplied=new Map();
+function bldState(id){ const b=BLD.get(id), e=ED.show?EDITS.blds[id]:null; if(e&&e.del) return {h:b.h,del:1}; if(e&&e.levels) return {h:+(e.levels*FLOOR_H).toFixed(1),del:0}; return {h:b.h,del:0}; }
+function bldFeature(b){ const st=bldState(b.id); return {type:'Feature',id:b.id,geometry:b.g.length===1?{type:'Polygon',coordinates:b.g[0]}:{type:'MultiPolygon',coordinates:b.g},properties:{render_height:st.h,render_min_height:b.mh,del:st.del,t:b.t}}; }
+function setBldData(){
+  bApplied.clear();
+  for(const k in EDITS.blds){ const id=+k; if(BLD.has(id)){ const st=bldState(id); bApplied.set(id,st.h+'|'+st.del); } }
+  map.getSource('b3').setData({type:'FeatureCollection',features:[...BLD.values()].map(bldFeature)});
+}
+function applyBldEdits(){
+  const src=map.getSource('b3'); if(!src||!BLD.size) return;
+  const ids=new Set([...bApplied.keys(),...Object.keys(EDITS.blds).map(Number)]), upd=[];
+  for(const id of ids){
+    const b=BLD.get(id); if(!b) continue;
+    const st=bldState(id), k=st.h+'|'+st.del, base=b.h+'|0', prev=bApplied.has(id)?bApplied.get(id):base;
+    if(prev!==k) upd.push({id,addOrUpdateProperties:[{key:'render_height',value:st.h},{key:'del',value:st.del}]});
+    if(k===base) bApplied.delete(id); else bApplied.set(id,k);
+  }
+  if(!upd.length) return;
+  try{ if(typeof src.updateData!=='function') throw new Error('yok'); src.updateData({update:upd}); }
+  catch(e){ setBldData(); }
+}
+/* yükleme ekranı */
+function showLoad(on,err){ $('#load').hidden=!on; if(on) setLoad('Etimesgut verisi kontrol ediliyor…',0,err); }
+function setLoad(txt,frac,err){
+  $('#loadTxt').textContent=txt;
+  if(frac!=null) $('#loadBar').style.width=Math.round(frac*100)+'%';
+  $('#loadErr').hidden=!err; $('#load').classList.toggle('err',!!err);
+}
+$('#loadRetry').onclick=()=>loadArea(false);
+$('#loadSkip').onclick=()=>{ showLoad(false); toast('Harita verisiz açıldı · düzenleme için veri gerekli',3500); };
+async function overpass(q,tmo=20000){
+  const one=async u=>{
+    const ctl=new AbortController(); ctls.push(ctl); const to=setTimeout(()=>ctl.abort(),tmo);
+    try{ const r=await fetch(u,{method:'POST',body:'data='+encodeURIComponent(q),headers:{'Content-Type':'application/x-www-form-urlencoded'},signal:ctl.signal});
+      if(!r.ok) throw new Error('HTTP '+r.status); const j=await r.json(); ovpBest=u; return j; }
+    finally{ clearTimeout(to); }
+  };
+  const ctls=[];
+  // son çalışan sunucu önce; 2,5 sn içinde dönmezse diğerleri de yarışa girer
+  const list=ovpBest?[ovpBest,...OVP.filter(u=>u!==ovpBest)]:OVP;
+  const first=one(list[0]);
+  let done=false;
+  const rest=new Promise(res=>setTimeout(res,tmo>30000?8000:2500)).then(()=>done?Promise.reject(new Error('gerek yok')):Promise.any(list.slice(1).map(one)));
+  try{ return await Promise.any([first,rest]); }
+  finally{ done=true; ctls.forEach(c=>c.abort()); }
+}
+const statText=()=>`Etimesgut · ${stats.ways} yol · ${BLD.size} bina · ${stats.sig} ışık · ${stats.cross} yaya geçidi · ${stats.warn} uyarı levhası · ${stats.dir} yön tabelası`;
+function status(cls,txt){ const el=$('#status'); el.className='panel '+cls; el.querySelector('span').textContent=txt; }
+
+/* ============ araç ============ */
+let carPos=START.slice(), carB=0;
+function setCar(p,b){ carPos=p; carB=b; map.getSource('car').setData({type:'FeatureCollection',features:[feat('Point',p,{b})]}); }
+
+/* ============ kavşak görünümü ============ */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const trunc=(s,n)=>s.length>n?s.slice(0,n-1)+'…':s;
+function jvSVG(lanes,sign){
+  const N=Math.max(1,lanes.length), W=340, H=210, hz=80, bx0=12, bx1=328, tx0=152, tx1=188;
+  const xb=i=>bx0+(bx1-bx0)*i/N, xt=i=>tx0+(tx1-tx0)*i/N;
+  let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kavşak şerit görünümü"><defs><linearGradient id="jsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--jv-sky1)"/><stop offset="1" style="stop-color:var(--jv-sky2)"/></linearGradient></defs>`;
+  s+=`<rect width="${W}" height="${hz}" fill="url(#jsky)"/><rect y="${hz}" width="${W}" height="${H-hz}" style="fill:var(--jv-ground)"/>`;
+  // ufuk silüeti
+  const sky=[[0,22,18],[24,14,30],[42,26,22],[72,16,36],[92,22,16],[226,18,28],[248,24,40],[276,14,20],[294,22,32],[320,20,18]];
+  for(const [x,w,h] of sky) s+=`<rect x="${x}" y="${hz-h}" width="${w}" height="${h}" style="fill:var(--jv-city)"/>`;
+  for(let i=0;i<N;i++){
+    const on=lanes[i].on;
+    s+=`<polygon points="${xb(i)},${H} ${xb(i+1)},${H} ${xt(i+1)},${hz} ${xt(i)},${hz}" style="fill:${on?'var(--jv-lane-on)':'var(--jv-road)'}"/>`;
+  }
+  for(let i=0;i<=N;i++){
+    const edge=i===0||i===N;
+    s+=`<line x1="${xb(i)}" y1="${H}" x2="${xt(i)}" y2="${hz}" style="stroke:var(--jv-line)" stroke-width="${edge?3:2}" ${edge?'':'stroke-dasharray="16 12"'}/>`;
+  }
+  const y0=152, t=(y0-hz)/(H-hz);
+  for(let i=0;i<N;i++){
+    const cx=((xt(i)+xt(i+1))/2)*(1-t)+((xb(i)+xb(i+1))/2)*t;
+    const lw=(xt(i+1)-xt(i))*(1-t)+(xb(i+1)-xb(i))*t;
+    const k=Math.min(lw*0.62/100,0.62);
+    s+=`<g transform="translate(${(cx-50*k).toFixed(1)} ${(y0-50*k*0.85).toFixed(1)}) scale(${k.toFixed(3)} ${(k*0.85).toFixed(3)})">${arrowSVG(lanes[i].d,lanes[i].on?'var(--jv-arrow-on)':'var(--jv-arrow-off)',10)}</g>`;
+  }
+  if(sign){
+    const col=sign.kind==='motorway'?'var(--sign-green)':'var(--sign-blue)';
+    s+=`<line x1="58" y1="6" x2="58" y2="${hz+16}" stroke="#7b8592" stroke-width="5"/><line x1="282" y1="6" x2="282" y2="${hz+16}" stroke="#7b8592" stroke-width="5"/><line x1="58" y1="14" x2="282" y2="14" stroke="#7b8592" stroke-width="3"/>`;
+    s+=`<rect x="74" y="8" width="192" height="52" rx="5" style="fill:${col}" stroke="#fff" stroke-width="2"/>`;
+    s+=`<text x="${sign.dir?156:170}" y="31" text-anchor="middle" class="sg1">${esc(trunc(sign.title||'',sign.dir?20:24))}</text>`;
+    if(sign.sub) s+=`<text x="${sign.dir?156:170}" y="50" text-anchor="middle" class="sg2">${esc(trunc(sign.sub,28))}</text>`;
+    if(sign.dir) s+=`<g transform="translate(232 14) scale(0.4)">${arrowSVG([sign.dir],'#fff',11)}</g>`;
+  }
+  return s+'</svg>';
+}
+let jvKey=null;
+function showJV(key,title,meta,lanes,sign,dist){
+  $('#jv').hidden=false; document.body.classList.add('jvon');
+  $('#jvTitle').textContent=title; $('#jvMeta').textContent=meta||'';
+  if(jvKey!==key){ jvKey=key; $('#jvArt').innerHTML=jvSVG(lanes,sign)+'<div id="jvDist"></div>'; }
+  $('#jvDist').textContent=dist||'';
+}
+function hideJV(){ $('#jv').hidden=true; jvKey=null; document.body.classList.remove('jvon'); }
+$('#jvClose').onclick=()=>{ hideJV(); if(nav.route) nav.jvMuted=nav.k; };
+
+function showWayPanel(w){
+  const t=w.t; let tl=w.oneway?t['turn:lanes']:t['turn:lanes:forward'];
+  const n=w.oneway?w.L:w.fwd;
+  const lanes=tl?tl.split('|').map(v=>({d:combo(v||'through').split(';'),on:true})):Array.from({length:n},()=>({d:['through'],on:true}));
+  const name=t.name||t.ref||'İsimsiz yol';
+  const meta=[`${w.L} şerit`,w.oneway?'tek yön':`${w.fwd}+${w.bwd} çift yön`,t.maxspeed?`${t.maxspeed} km/s`:null,tl?'şerit okları OSM\'de var':'şerit okları işaretlenmemiş'].filter(Boolean).join(' · ');
+  const dest=t.destination||t['destination:forward'];
+  showJV('way'+w.id,name,meta,lanes,{title:dest?dest.split(';')[0]:name,sub:t['destination:ref']||t.ref||'',kind:w.base==='motorway'?'motorway':'road'});
+}
+
+/* ============ rota ve sürüş ============ */
+const nav={route:null,d:0,v:0,driving:false,mult:1,last:0,camB:0,k:-1,jvMuted:-1,loadT:0,dest:null,destMarker:null};
+function hav(a,b){ const R=6371000,dLa=(b[1]-a[1])*DEG,dLo=(b[0]-a[0])*DEG; const s=Math.sin(dLa/2)**2+Math.cos(a[1]*DEG)*Math.cos(b[1]*DEG)*Math.sin(dLo/2)**2; return 2*R*Math.asin(Math.sqrt(s)); }
+function brg(a,b){ const y=Math.sin((b[0]-a[0])*DEG)*Math.cos(b[1]*DEG), x=Math.cos(a[1]*DEG)*Math.sin(b[1]*DEG)-Math.sin(a[1]*DEG)*Math.cos(b[1]*DEG)*Math.cos((b[0]-a[0])*DEG); return Math.atan2(y,x)/DEG; }
+function segAt(R,d){ let lo=0,hi=R.cum.length-1; while(hi-lo>1){ const m=(lo+hi)>>1; if(R.cum[m]<=d) lo=m; else hi=m; } return lo; }
+function posAt(R,d){ const i=segAt(R,d), a=R.coords[i], b=R.coords[i+1]||a, s=(R.cum[i+1]-R.cum[i])||1, t=Math.min(1,Math.max(0,(d-R.cum[i])/s)); return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]; }
+function durAt(R,d){ const i=segAt(R,d), s=(R.cum[i+1]-R.cum[i])||1, t=Math.min(1,Math.max(0,(d-R.cum[i])/s)); return R.cdur[i]+((R.cdur[i+1]??R.cdur[i])-R.cdur[i])*t; }
+const lerpA=(a,b,t)=>{ let d=((b-a+540)%360)-180; return a+d*t; };
+const fmtD=m=>m<950?`${Math.max(10,Math.round(m/10)*10)} m`:`${(m/1000).toFixed(m<9500?1:0).replace('.',',')} km`;
+const modDir=m=>normDir(m||'straight');
+
+function instr(st){
+  const m=st.maneuver,t=m.type,mod=m.modifier||'straight';
+  const M={left:'Sola dönün',right:'Sağa dönün','slight left':'Hafif sola dönün','slight right':'Hafif sağa dönün','sharp left':'Keskin sola dönün','sharp right':'Keskin sağa dönün',straight:'Düz devam edin',uturn:'U dönüşü yapın'};
+  if(t==='arrive') return 'Hedefe ulaşın';
+  if(t==='depart') return 'Yola çıkın';
+  if(t==='roundabout'||t==='rotary') return m.exit?`Dönel kavşaktan ${m.exit}. çıkışı alın`:'Dönel kavşağa girin';
+  if(t==='roundabout turn') return M[mod]||'Dönel kavşakta dönün';
+  if(t==='exit roundabout'||t==='exit rotary') return 'Dönel kavşaktan çıkın';
+  if(t==='fork') return mod.includes('left')?'Ayrımda soldan devam edin':mod.includes('right')?'Ayrımda sağdan devam edin':'Ayrımda düz devam edin';
+  if(t==='off ramp') return mod.includes('left')?'Soldaki çıkışı alın':'Sağdaki çıkışı alın';
+  if(t==='on ramp') return 'Bağlantı yoluna girin';
+  if(t==='merge') return 'Trafiğe katılın';
+  if(t==='end of road') return mod.includes('left')?'Yolun sonunda sola dönün':'Yolun sonunda sağa dönün';
+  return M[mod]||'Devam edin';
+}
+const stepName=st=>[st.ref,st.name].filter(Boolean).join(' · ');
+function stepLanes(R,k){
+  const st=R.steps[k]; let L=st.intersections&&st.intersections[0]&&st.intersections[0].lanes;
+  if(!L&&k>0){ const p=R.steps[k-1].intersections; L=p&&p[p.length-1].lanes; }
+  return L?L.map(l=>({d:(l.indications||['straight']).map(normDir),on:!!l.valid})):null;
+}
+
+async function setDest(ll,label){
+  nav.dest=ll;
+  if(nav.destMarker) nav.destMarker.remove();
+  const el=document.createElement('div'); el.className='dest-pin';
+  nav.destMarker=new maplibregl.Marker({element:el,anchor:'bottom'}).setLngLat(ll).addTo(map);
+  toast('Rota hesaplanıyor…',0);
+  try{
+    const j=await fetchRoute(carPos,ll);
+    const rt=j.routes[0], coords=rt.geometry.coordinates, ann=rt.legs[0].annotation||{};
+    const cumA=[0], cd=[0];
+    for(let i=1;i<coords.length;i++){ cumA.push(cumA[i-1]+hav(coords[i-1],coords[i])); cd.push(cd[i-1]+((ann.duration&&ann.duration[i-1])||hav(coords[i-1],coords[i])/12)); }
+    const steps=rt.legs[0].steps, tot=cumA[cumA.length-1];
+    const sum=steps.reduce((a,s)=>a+s.distance,0)||1; const f=tot/sum;
+    const ss=[]; let acc=0; for(const s of steps){ ss.push(acc*f); acc+=s.distance; }
+    nav.route={coords,cum:cumA,cdur:cd,spd:ann.speed||[],maxs:ann.maxspeed||[],steps,stepStart:ss,total:tot,totalDur:cd[cd.length-1],label};
+    nav.d=0; nav.v=0; nav.k=-1; nav.jvMuted=-1; nav.said=new Set(); nav.overT=0;
+    routeAlerts(nav.route);
+    map.getSource('route').setData(feat('LineString',coords));
+    $('#trip').hidden=false; $('#bGo').textContent='Başlat';
+    const b=coords.reduce((bb,c)=>bb.extend(c),new maplibregl.LngLatBounds(coords[0],coords[0]));
+    map.fitBounds(b,{padding:{top:150,bottom:120,left:50,right:50},pitch:40,bearing:0,duration:900,maxZoom:17});
+    updateNav(); const na=nav.route.alerts.length;
+    toast(`${label||'Hedef'} · ${fmtD(tot)}`+(na?` · yol üzerinde ${na} uyarı`:''),3000);
+  }catch(e){ console.error(e); toast('Rota alınamadı: '+(e.message||'bağlantı hatası'),5000); }
+}
+async function fetchRoute(a,b){
+  const qs=`${a[0].toFixed(6)},${a[1].toFixed(6)};${b[0].toFixed(6)},${b[1].toFixed(6)}?overview=full&geometries=geojson&steps=true`;
+  let last=new Error('yönlendirme sunucusuna ulaşılamadı');
+  for(const base of ROUTERS){
+    for(const ann of ['&annotations=distance,duration,speed,maxspeed','&annotations=distance,duration,speed','']){
+      try{
+        const ctl=new AbortController(), to=setTimeout(()=>ctl.abort(),12000);
+        const r=await fetch(base+qs+ann,{signal:ctl.signal}); clearTimeout(to);
+        const j=await r.json().catch(()=>({}));
+        if(j.code==='Ok'&&j.routes&&j.routes.length) return j;
+        if(j.code==='NoRoute'||j.code==='NoSegment'){ last=new Error('bu iki nokta arasında araç yolu yok'); break; }
+        last=new Error(j.message||('sunucu hatası '+r.status));
+        if(r.status!==400) break;
+      }catch(e){ last=new Error(e.name==='AbortError'?'sunucu zaman aşımı':'bağlantı hatası'); break; }
+    }
+  }
+  throw last;
+}
+function endRoute(){
+  nav.driving=false; nav.route=null; document.body.classList.remove('nav');
+  map.getSource('route').setData(EMPTY); map.getSource('rt-al').setData(EMPTY); if(nav.destMarker) nav.destMarker.remove();
+  $('#alerts').innerHTML=''; $('#road').hidden=true; try{ speechSynthesis.cancel(); }catch(e){}
+  $('#trip').hidden=true; $('#maneuver').hidden=true; hideJV();
+}
+function nextStep(R){ for(let k=0;k<R.steps.length;k++) if(R.stepStart[k]>nav.d+2) return k; return R.steps.length-1; }
+
+/* ---- rota üzerindeki uyarılar: her uyarıyı rotaya izdüşür, rota boyunca konumunu bul ---- */
+function routeAlerts(R){
+  const kx=111320*Math.cos(R.coords[0][1]*DEG), ky=110574, o=R.coords[0];
+  const xy=R.coords.map(c=>[(c[0]-o[0])*kx,(c[1]-o[1])*ky]);
+  let bb=[Infinity,Infinity,-Infinity,-Infinity]; for(const q of xy){ bb[0]=Math.min(bb[0],q[0]); bb[1]=Math.min(bb[1],q[1]); bb[2]=Math.max(bb[2],q[0]); bb[3]=Math.max(bb[3],q[1]); }
+  const out=[];
+  for(const a of ALERTS){
+    const p=[(a.ll[0]-o[0])*kx,(a.ll[1]-o[1])*ky];
+    if(p[0]<bb[0]-20||p[0]>bb[2]+20||p[1]<bb[1]-20||p[1]>bb[3]+20) continue;
+    let best=Infinity, bd=0;
+    for(let i=0;i<xy.length-1;i++){
+      const A=xy[i],B=xy[i+1],dx=B[0]-A[0],dy=B[1]-A[1],L2=dx*dx+dy*dy||1;
+      const t=Math.max(0,Math.min(1,((p[0]-A[0])*dx+(p[1]-A[1])*dy)/L2));
+      const ex=A[0]+dx*t-p[0], ey=A[1]+dy*t-p[1], d2=ex*ex+ey*ey;
+      if(d2<best){ best=d2; bd=R.cum[i]+(R.cum[i+1]-R.cum[i])*t; }
+    }
+    if(best>(a.kind==='camera'?30*30:14*14)) continue;
+    if(bd<5||bd>R.total-5) continue;
+    out.push({kind:a.kind,d:bd,ll:a.ll});
+  }
+  out.sort((a,b)=>a.d-b.d);
+  // aynı kavşaktaki aynı türden uyarıları birleştir
+  const al=[]; for(const a of out){ const prev=al.findLast(x=>x.kind===a.kind); if(prev&&a.d-prev.d<45) continue; al.push(a); }
+  R.alerts=al;
+  map.getSource('rt-al').setData({type:'FeatureCollection',features:al.map(a=>feat('Point',a.ll,{kind:a.kind}))});
+}
+function showAlerts(R){
+  const box=$('#alerts'), list=(R.alerts||[]).filter(a=>{ const dm=a.d-nav.d; return dm>-3&&dm<=ALERT_KIND[a.kind][2]; }).slice(0,2);
+  const key=list.map(a=>a.kind+a.d).join('|');
+  if(box.dataset.key!==key){
+    box.dataset.key=key;
+    box.innerHTML=list.map(a=>`<div class="alert panel" data-d="${a.d}"><img src="${badgeURL(a.kind)}" alt=""><div><b></b><span>${ALERT_KIND[a.kind][0]}</span></div></div>`).join('');
+  }
+  box.querySelectorAll('.alert').forEach(el=>{ const dm=Math.max(0,+el.dataset.d-nav.d); el.querySelector('b').textContent=dm<15?'Şimdi':fmtD(dm); el.classList.toggle('hot',dm<80); });
+  // konum: geniş ekranda arama kutusunun, dar ekranda manevra tabelasının altına
+  const anchor=innerWidth<=760?$('#maneuver'):$('#search');
+  if(anchor&&!anchor.hidden&&getComputedStyle(anchor).display!=='none') box.style.top=(anchor.getBoundingClientRect().bottom+8)+'px';
+  if(nav.driving) for(const a of list){
+    const id='a'+a.kind+Math.round(a.d), dm=a.d-nav.d;
+    if(!nav.said.has(id)&&dm>20){ nav.said.add(id); say(`${sayD(dm)} ileride ${ALERT_KIND[a.kind][0].toLocaleLowerCase('tr-TR')}`); }
+  }
+}
+/* ---- aracın bulunduğu yol (yerel şerit verisinden) ---- */
+function wayAt(ll,bear){
+  let best=null, bd=12;
+  for(const w of ways.values()){
+    const p=w.pr.fwd(ll); if(p[0]<w.bb[0]-bd||p[0]>w.bb[2]+bd||p[1]<w.bb[1]-bd||p[1]>w.bb[3]+bd) continue;
+    for(let i=0;i<w.P.length-1;i++){
+      const A=w.P[i],B=w.P[i+1],dx=B[0]-A[0],dy=B[1]-A[1],L2=dx*dx+dy*dy||1;
+      const t=Math.max(0,Math.min(1,((p[0]-A[0])*dx+(p[1]-A[1])*dy)/L2));
+      const d=Math.hypot(A[0]+dx*t-p[0],A[1]+dy*t-p[1]);
+      const ang=Math.atan2(dx,dy)/DEG, diff=Math.abs(((bear-ang+540)%360)-180);
+      const pen=d+(w.oneway&&diff>100?20:0)+Math.min(diff,180-diff)*0.05;
+      if(pen<bd){ bd=pen; best={w,fwd:diff<=90}; }
+    }
+  }
+  return best;
+}
+function showRoad(R){
+  if(!nav.driving&&nav.d===0){ $('#road').hidden=true; return; }
+  if(Date.now()-(nav.wayT||0)>500){ nav.wayT=Date.now(); const h=wayAt(carPos,carB); nav.way=h?h.w:null; nav.wayFwd=h?h.fwd:true; }
+  const w=nav.way, i=segAt(R,nav.d);
+  let step=R.steps[0]; for(let k=0;k<R.steps.length;k++) if(R.stepStart[k]<=nav.d+1) step=R.steps[k];
+  const name=(w&&(w.t.name||w.t.ref))||stepName(step);
+  const n=w?(w.oneway?w.L:(nav.wayFwd?w.fwd:w.bwd)):0;
+  $('#road').hidden=!(name||n);
+  $('#rName').textContent=name||'İsimsiz yol';
+  $('#rLanes').innerHTML=n?`<i>${'<u></u>'.repeat(Math.min(n,6))}</i>${n} şerit`:'';
+  $('#rLanes').hidden=!n;
+}
+/* ---- ses ---- */
+let voiceOn=true; try{ voiceOn=localStorage.getItem('yolharita3b.ses')!=='0'; }catch(e){}
+function setVoiceBtn(){ const b=$('#bVoice'); b.classList.toggle('off',!voiceOn); b.querySelector('.wave').style.display=voiceOn?'':'none'; b.title=voiceOn?'Sesli yönlendirme açık':'Sesli yönlendirme kapalı'; }
+function say(t){
+  if(!voiceOn||!('speechSynthesis' in window)) return;
+  try{ const u=new SpeechSynthesisUtterance(t); u.lang='tr-TR'; u.rate=1.05; const v=speechSynthesis.getVoices().find(v=>/^tr/i.test(v.lang)); if(v) u.voice=v; speechSynthesis.speak(u); }catch(e){}
+}
+const sayD=m=>m>=950?`${(m/1000).toFixed(1).replace('.',',')} kilometre`:`${Math.max(50,Math.round(m/50)*50)} metre`;
+$('#bVoice').onclick=()=>{ voiceOn=!voiceOn; try{ localStorage.setItem('yolharita3b.ses',voiceOn?'1':'0'); }catch(e){} setVoiceBtn(); if(!voiceOn) try{ speechSynthesis.cancel(); }catch(e){} else say('Sesli yönlendirme açık'); };
+setVoiceBtn();
+
+function updateNav(){
+  const R=nav.route; if(!R) return;
+  const k=nextStep(R), st=R.steps[k], dm=Math.max(0,R.stepStart[k]-nav.d);
+  const m=st.maneuver, arrive=m.type==='arrive';
+  // manevra tabelası
+  $('#maneuver').hidden=false;
+  if(k!==nav.k){
+    nav.k=k;
+    $('#mIcon').innerHTML=arrive?'<circle cx="50" cy="40" r="16" fill="none" stroke="#fff" stroke-width="9"/><path d="M50 58 50 92" stroke="#fff" stroke-width="9"/>':arrowSVG([modDir(m.modifier)],'#fff',11);
+    $('#mText').textContent=instr(st);
+    $('#mStreet').textContent=arrive?(R.label||''):(st.destinations||stepName(st)||'');
+    const L=stepLanes(R,k), box=$('#mLanes');
+    if(L&&L.length>1){ box.hidden=false; box.innerHTML=L.map((l,i)=>(i?'<i class="sep"></i>':'')+`<svg viewBox="0 0 100 100">${arrowSVG(l.d,l.on?'#fff':'rgba(255,255,255,.32)',10)}</svg>`).join(''); }
+    else box.hidden=true;
+  }
+  $('#mDist').textContent=arrive&&dm<15?'Vardınız':fmtD(dm);
+  // kavşak görünümü
+  const big=['turn','fork','off ramp','on ramp','end of road','roundabout','rotary','merge'].includes(m.type)||(m.type==='continue'&&m.modifier&&m.modifier!=='straight');
+  const L=stepLanes(R,k);
+  if(nav.driving&&!arrive&&dm<380&&(L||big)&&nav.jvMuted!==k){
+    const lanes=L||[{d:[modDir(m.modifier)],on:true}];
+    const dest=st.destinations?st.destinations.split(',')[0]:(st.name||instr(st));
+    showJV('step'+k,instr(st),stepName(st),lanes,{title:dest,sub:st.ref||(st.destinations&&st.name)||'',kind:/^O-|otoyol/i.test((st.ref||'')+st.name)?'motorway':'road',dir:modDir(m.modifier)},fmtD(dm));
+  } else if(jvKey&&jvKey.startsWith('step')) hideJV();
+  // sesli yönlendirme
+  const plain=m.type==='depart'||(['continue','new name','notification'].includes(m.type)&&(!m.modifier||m.modifier==='straight'));
+  if(nav.driving&&!arrive&&!plain){
+    const verb=instr(st), low=verb.charAt(0).toLocaleLowerCase('tr-TR')+verb.slice(1);
+    if(dm<=400&&dm>150&&!nav.said.has('f'+k)){ nav.said.add('f'+k); say(`${sayD(dm)} sonra ${low}`+(st.name?`, ${st.name}`:'')); }
+    else if(dm<=70&&!nav.said.has('n'+k)){ nav.said.add('n'+k); nav.said.add('f'+k); say(verb); }
+  }
+  // yaklaşan uyarılar
+  showAlerts(R);
+  // mevcut yol ve şerit sayısı
+  showRoad(R);
+  // yolculuk şeridi
+  const i=segAt(R,nav.d), ms=R.maxs[i];
+  const lim=$('#tLimit');
+  let limit=ms&&ms.speed?(ms.unit==='mph'?Math.round(ms.speed*1.609):ms.speed):0;
+  if(!limit&&nav.way) limit=parseInt(nav.way.t.maxspeed)||0;
+  if(limit){ lim.textContent=limit; lim.className='sl'; } else { lim.textContent='—'; lim.className='sl none'; }
+  const kmh=Math.round(nav.v*3.6), over=nav.driving&&limit&&kmh>limit+3;
+  $('#tSpeed').textContent=kmh; lim.classList.toggle('over',!!over); $('#tSpeed').parentElement.classList.toggle('over',!!over);
+  if(over&&Date.now()-nav.overT>20000){ nav.overT=Date.now(); say(`Hız sınırı ${limit}. Lütfen yavaşlayın`); }
+  const rest=R.totalDur-durAt(R,nav.d), arr=new Date(Date.now()+rest*1000);
+  $('#tEta').textContent=arr.toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'});
+  $('#tRest').textContent=`${fmtD(R.total-nav.d)} · ${Math.max(1,Math.round(rest/60))} dk kaldı`;
+}
+
+function tick(ts){
+  if(!nav.driving||!nav.route) return;
+  const R=nav.route, dt=Math.min(0.1,(ts-(nav.last||ts))/1000); nav.last=ts;
+  const i=segAt(R,nav.d); let tgt=Math.min(33,Math.max(5,R.spd[i]||12));
+  const k=nextStep(R), st=R.steps[k], dm=R.stepStart[k]-nav.d, mod=st.maneuver.modifier||'';
+  if(/left|right|uturn/.test(mod)&&!['depart','arrive'].includes(st.maneuver.type)&&dm<70) tgt=Math.min(tgt,6+dm*0.12);
+  if(st.maneuver.type==='arrive'&&dm<80) tgt=Math.min(tgt,3+dm*0.15);
+  nav.v+=(tgt-nav.v)*Math.min(1,dt*0.9);
+  nav.d+=nav.v*dt*nav.mult;
+  if(nav.d>=R.total-1){ nav.d=R.total; nav.driving=false; $('#bGo').textContent='Baştan'; toast('Hedefe ulaştınız',3000); say('Hedefinize ulaştınız'); }
+  const p=posAt(R,nav.d), q=posAt(R,Math.min(R.total,nav.d+22)); const b=hav(p,q)>1?brg(p,q):carB;
+  nav.camB=lerpA(nav.camB,b,Math.min(1,dt*2.2*Math.sqrt(nav.mult)));
+  setCar(p,b);
+  map.jumpTo({center:p,bearing:nav.camB,pitch:60,zoom:17.7,padding:{top:innerHeight*0.42,bottom:0,left:0,right:0}});
+  if(ts-nav.loadT>1500){ nav.loadT=ts; wantCells(posAt(R,Math.min(R.total,nav.d+250))); }
+  if(ts-(nav.uiT||0)>200){ nav.uiT=ts; updateNav(); }
+  if(nav.driving) requestAnimationFrame(tick);
+}
+
+$('#bGo').onclick=()=>{
+  if(!nav.route) return;
+  if(nav.driving){ nav.driving=false; $('#bGo').textContent='Devam'; return; }
+  if(nav.d>=nav.route.total) { nav.d=0; nav.k=-1; nav.said=new Set(); }
+  nav.driving=true; nav.last=0; nav.camB=map.getBearing(); document.body.classList.add('nav');
+  $('#bGo').textContent='Duraklat'; requestAnimationFrame(tick);
+};
+$('#bMult').onclick=()=>{ nav.mult=nav.mult===1?2:nav.mult===2?4:1; $('#bMult').textContent=nav.mult+'×'; };
+$('#bEnd').onclick=endRoute;
+
+/* ============ arama (Nominatim) ============ */
+let qT;
+$('#q').addEventListener('input',e=>{ clearTimeout(qT); const v=e.target.value.trim(); if(v.length<3){ $('#results').hidden=true; return; } qT=setTimeout(()=>search(v),450); });
+$('#q').addEventListener('keydown',e=>{ if(e.key==='Enter'){ const b=$('#results button'); if(b) b.click(); } if(e.key==='Escape') $('#results').hidden=true; });
+async function search(v){
+  const c=map.getCenter(), vb=[c.lng-0.6,c.lat+0.4,c.lng+0.6,c.lat-0.4].join(',');
+  try{
+    let j=[];
+    try{ const r=await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&accept-language=tr&viewbox=${vb}&q=${encodeURIComponent(v)}`); if(r.ok) j=await r.json(); }catch(e){}
+    if(!j.length){
+      const r=await fetch(`https://photon.komoot.io/api/?limit=6&lat=${c.lat}&lon=${c.lng}&q=${encodeURIComponent(v)}`); const g=await r.json();
+      j=(g.features||[]).map(f=>{ const p=f.properties; const parts=[p.street&&(p.street+(p.housenumber?' '+p.housenumber:'')),p.district,p.city||p.county,p.state,p.country].filter(Boolean); return {name:p.name||parts[0],display_name:[p.name,...parts].filter(Boolean).join(', '),lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}; });
+    }
+    const box=$('#results');
+    if(!j.length){ box.innerHTML='<button disabled>Sonuç yok</button>'; box.hidden=false; return; }
+    box.innerHTML=j.map((x,i)=>`<button data-i="${i}"><b>${esc(x.name||x.display_name.split(',')[0])}</b><small>${esc(x.display_name)}</small></button>`).join('');
+    box.hidden=false;
+    box.querySelectorAll('button').forEach(b=>b.onclick=()=>{ const x=j[+b.dataset.i]; box.hidden=true; $('#q').value=x.name||x.display_name.split(',')[0]; $('#q').blur(); setDest([+x.lon,+x.lat],$('#q').value); });
+  }catch(e){ toast('Arama yapılamadı, bağlantıyı kontrol edin.',3000); }
+}
+
+/* ============ etkileşim ============ */
+let popup=null, lpT=null, lpFired=0, pickMode=false;
+function openMenu(ll){
+  if(popup) popup.remove();
+  const d=document.createElement('div'); d.className='pmenu';
+  d.innerHTML='<button data-a="go">Buraya git</button><button data-a="car">Aracı buraya al</button>';
+  d.onclick=e=>{ const a=e.target.dataset.a; if(!a) return; popup.remove(); const p=[ll.lng,ll.lat];
+    if(a==='go') setDest(p,'Seçilen nokta'); else { setCar(p,carB); if(nav.route) endRoute(); wantCells(p); } };
+  popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:8}).setLngLat(ll).setDOMContent(d).addTo(map);
+}
+map.on('contextmenu',e=>{ if(!ED.on) openMenu(e.lngLat); });
+map.on('touchstart',e=>{ clearTimeout(lpT); if(ED.on||e.originalEvent.touches.length>1) return; lpT=setTimeout(()=>{ lpFired=Date.now(); openMenu(e.lngLat); },550); });
+['touchmove','touchend','dragstart','zoomstart'].forEach(ev=>map.on(ev,()=>clearTimeout(lpT)));
+map.on('click',e=>{
+  if(Date.now()-lpFired<700) return;
+  if(ED.on){ edClick(e); return; }
+  if(popup&&popup.isOpen()){ popup.remove(); return; }
+  if(pickMode){ setPick(false); setDest([e.lngLat.lng,e.lngLat.lat],'Seçilen nokta'); return; }
+  if(nav.driving) return;
+  const p=e.point, f=map.queryRenderedFeatures([[p.x-6,p.y-6],[p.x+6,p.y+6]],{layers:['ov-surf']})[0];
+  if(f){ const w=ways.get(f.properties.id); if(w) showWayPanel(w); }
+  else if(map.getZoom()<15.5) toast('Şerit ayrıntısı için yakınlaşın',1800);
+  else if(jvKey&&jvKey.startsWith('way')) hideJV();
+});
+let mT;
+map.on('moveend',()=>{ if(nav.driving) return; clearTimeout(mT); mT=setTimeout(()=>{ const c=map.getCenter(); if(Math.abs(c.lat-lat0)>2){ lat0=c.lat; setWidths(); } wantCells(c.toArray()); },500); });
+map.on('rotate',()=>{ $('#compass').style.transform=`rotate(${-map.getBearing()}deg)`; });
+
+function setPick(on){ pickMode=on; $('#bRoute').classList.toggle('on',on); document.body.classList.toggle('pick',on); if(on) toast('Gitmek istediğin yere dokun',0); else $('#toast').classList.add('hide'); }
+$('#bRoute').onclick=()=>{ if(ED.on) setEdit(false); setPick(!pickMode); };
+$('#b3d').onclick=()=>{ const flat=map.getPitch()>5; map.easeTo({pitch:flat?0:62,duration:700}); $('#b3d').textContent=flat?'2B':'3B'; };
+$('#bNorth').onclick=()=>map.easeTo({bearing:0,duration:600});
+$('#bTheme').onclick=()=>{ mode=mode==='night'?'day':'night'; document.documentElement.dataset.theme=mode==='day'?'light':'dark'; applyPalette(); };
+$('#bCar').onclick=()=>map.easeTo({center:carPos,zoom:17.4,pitch:62,bearing:carB,duration:900});
+
+let tT;
+function toast(msg,ms){ const t=$('#toast'); t.textContent=msg; t.classList.remove('hide'); clearTimeout(tT); if(ms) tT=setTimeout(()=>t.classList.add('hide'),ms); }
+
+/* ============ DÜZENLEYİCİ ============
+   Düzenlemeler OSM verisinin ÜSTÜNDE ayrı bir katman olarak tutulur.
+   Ham veri (RAW) hiç değişmez; harita her seferinde "ham + düzenlemeler"den yeniden kurulur.
+   Bir düzenleme çizilemezse yalnızca o atlanır, harita çalışmaya devam eder. */
+const ED_KEY='yolharita3b.etimesgut.duzenlemeler.v1';
+const FLOOR_H=3.2;
+const blankEdits=()=>({ways:{},roads:[],points:[],delNodes:[],blds:{},newBlds:[]});
+let EDITS=blankEdits();
+const ED={signType:'speed',signSpeed:50,on:false,tool:'select',sel:null,draw:null,undo:[],redo:[],show:true,errs:0,saveOk:true};
+const KIND_TR={traffic_signals:'Trafik ışığı',crossing:'Yaya geçidi',sign:'Trafik levhası',dir_sign:'Yön tabelası',stop:'DUR levhası',give_way:'Yol ver levhası',speed_sign:'Hız sınırı levhası'};
+const POINT_TOOLS=['traffic_signals','crossing','sign','dir_sign'];
+const CLS=[['motorway','Otoyol'],['trunk','Bölünmüş ana yol'],['primary','Birinci derece'],['secondary','İkinci derece'],['tertiary','Üçüncü derece'],['unclassified','Bağlantı yolu'],['residential','Mahalle arası'],['living_street','Yaya öncelikli']];
+const TURN_OPTS=['through','left','left;through','right','through;right','left;right','left;through;right','slight_left','slight_right','reverse','none'];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const newId=p=>p+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+
+function cleanEdits(o){
+  const e=blankEdits(), obj=x=>x&&typeof x==='object'&&!Array.isArray(x);
+  if(!obj(o)) return e;
+  if(obj(o.ways)) for(const k in o.ways) if(obj(o.ways[k])) e.ways[k]=o.ways[k];
+  if(Array.isArray(o.roads)) e.roads=o.roads.filter(r=>r&&r.id&&Array.isArray(r.coords)&&r.coords.length>1&&obj(r.tags)&&r.tags.highway);
+  if(Array.isArray(o.points)) e.points=o.points.filter(p=>p&&p.id&&Array.isArray(p.ll)&&obj(p.tags));
+  if(Array.isArray(o.delNodes)) e.delNodes=o.delNodes.filter(x=>typeof x==='number');
+  if(obj(o.blds)) for(const k in o.blds) if(obj(o.blds[k])) e.blds[k]=o.blds[k];
+  if(Array.isArray(o.newBlds)) e.newBlds=o.newBlds.filter(b=>b&&b.id&&Array.isArray(b.ring)&&b.ring.length>3);
+  return e;
+}
+function loadEdits(){
+  let s=null;
+  try{ s=localStorage.getItem(ED_KEY); }catch(e){ ED.saveOk=false; return; }
+  if(!s) return;
+  try{ const j=JSON.parse(s); EDITS=cleanEdits(j.edits||j); }
+  catch(e){ try{ localStorage.setItem(ED_KEY+'.bozuk',s); }catch(_){} toast('Kayıtlı düzenlemeler okunamadı; bozuk kopya ayrıca saklandı.',5000); }
+}
+function saveEdits(){
+  try{ localStorage.setItem(ED_KEY,JSON.stringify({v:1,saved:new Date().toISOString(),edits:EDITS})); ED.saveOk=true; }
+  catch(e){ ED.saveOk=false; }
+  edInfo();
+}
+const editCount=()=>Object.keys(EDITS.ways).length+EDITS.roads.length+EDITS.points.length+EDITS.delNodes.length+Object.keys(EDITS.blds).length+EDITS.newBlds.length;
+
+function commit(fn){
+  const before=JSON.stringify(EDITS), selBefore=ED.sel;
+  try{ fn(EDITS); }
+  catch(e){ console.error(e); EDITS=JSON.parse(before); ED.sel=selBefore; toast('Bu değişiklik yapılamadı; harita olduğu gibi kaldı.',3000); return; }
+  ED.undo.push(before); if(ED.undo.length>200) ED.undo.shift(); ED.redo=[];
+  saveEdits(); rebuild(); edPanel();
+}
+function undo(){ if(!ED.undo.length) return; ED.redo.push(JSON.stringify(EDITS)); EDITS=JSON.parse(ED.undo.pop()); saveEdits(); rebuild(); edPanel(); toast('Geri alındı',1200); }
+function redo(){ if(!ED.redo.length) return; ED.undo.push(JSON.stringify(EDITS)); EDITS=JSON.parse(ED.redo.pop()); saveEdits(); rebuild(); edPanel(); }
+
+/* ---- yeniden kurma ---- */
+const patchTags=(t,p)=>{ const o={...t}; for(const k in p){ if(p[k]===null||p[k]==='') delete o[k]; else o[k]=String(p[k]); } return o; };
+function safe(fn){ try{ fn(); }catch(e){ ED.errs++; console.warn(e); } }
+let rbT=null;
+function scheduleRebuild(){ clearTimeout(rbT); rbT=setTimeout(rebuild,40); }
+function rebuild(){
+  clearTimeout(rbT);
+  F.surf=[];F.mark=[];F.poly=[];F.pts=[];F.hit=[]; ways.clear(); nodeIdx.clear();
+  Object.assign(stats,{ways:0,sig:0,cross:0,arr:0,warn:0,dir:0}); ED.errs=0; ALERTS.length=0;
+  const E=ED.show?EDITS:null;
+  for(const w of RAW.ways.values()) safe(()=>processWay(E&&E.ways[w.id]?{...w,tags:patchTags(w.tags,E.ways[w.id])}:w));
+  if(E) for(const r of E.roads) safe(()=>processWay({id:r.id,tags:r.tags,geometry:r.coords.map(c=>({lon:c[0],lat:c[1]})),nodes:[]}));
+  const del=E?new Set(E.delNodes):null;
+  for(const n of RAW.nodes.values()) if(!(del&&del.has(n.id))) safe(()=>processNode(n));
+  if(E) for(const p of E.points) safe(()=>placeNode(p.id,p.tags,userEnts(p.ll),p.ll));
+  try{ flush(); renderEdLayers(); drawSel(); }catch(e){ console.error(e); }
+  if(nav.route) routeAlerts(nav.route);
+  if(RAW.ways.size||(E&&E.roads.length)) status(ED.errs?'err':'ok',statText()+(ED.errs?` · ${ED.errs} öğe çizilemedi`:'')+(!ED.show?' · ORİJİNAL GÖRÜNÜM':''));
+}
+
+/* ---- kullanıcı noktasını en yakın yola oturt ---- */
+function snapToWay(ll,maxD=25){
+  let best=null;
+  for(const w of ways.values()){
+    const q=w.pr.fwd(ll), b=w.bb;
+    if(q[0]<b[0]-maxD||q[0]>b[2]+maxD||q[1]<b[1]-maxD||q[1]>b[3]+maxD) continue;
+    const P=w.P;
+    for(let i=1;i<P.length;i++){
+      const a=P[i-1],c=P[i],dx=c[0]-a[0],dy=c[1]-a[1],L2=dx*dx+dy*dy||1e-9;
+      const t=clamp(((q[0]-a[0])*dx+(q[1]-a[1])*dy)/L2,0,1);
+      const d=Math.hypot(a[0]+dx*t-q[0],a[1]+dy*t-q[1]);
+      if(d<maxD&&(!best||d<best.d)) best={w,i,pos:w.C[i-1]+Math.sqrt(L2)*t,d};
+    }
+  }
+  return best;
+}
+function userEnts(ll){
+  const s=snapToWay(ll); if(!s) return [];
+  const w=s.w, len=w.C[w.C.length-1];
+  // kavşak düğümüne yakınsa o kavşaktaki tüm yollara uygula
+  for(const j of [s.i-1,s.i]){
+    const nid=w.nodes[j];
+    if(nid!=null&&Math.abs(w.C[j]-s.pos)<8){ const e=nodeIdx.get(nid); if(e&&e.length>1) return e.map(([w2,k])=>[w2,w2.C[k],k>0,k<w2.P.length-1]); }
+  }
+  return [[w,s.pos,s.pos>3,s.pos<len-3]];
+}
+
+/* ---- düzenleme katmanları ---- */
+function renderEdLayers(){
+  const fs=[];
+  if(ED.show) for(const b of EDITS.newBlds) fs.push(feat('Polygon',[b.ring],{bid:b.id,render_height:b.levels*FLOOR_H}));
+  map.getSource('ed-bld').setData({type:'FeatureCollection',features:fs});
+  applyBldEdits();
+}
+function bldData(s){
+  const nb=EDITS.newBlds.find(b=>b.id===s.id);
+  if(nb) return {isNew:true,levels:nb.levels,geom:[[nb.ring]],edited:true};
+  const b=BLD.get(s.id); if(!b) return null;
+  const e=EDITS.blds[s.id];
+  return {levels:(e&&e.levels)||b.lv,geom:b.g,h0:b.h,lv0:b.lv,est:b.est,type:b.t,name:b.n,del:!!(e&&e.del),edited:!!e};
+}
+function selFeatures(){
+  const s=ED.sel; if(!s||!ED.on) return [];
+  if(s.type==='way'){ const f=F.surf.find(f=>f.properties.id===s.id); return f?[feat('LineString',f.geometry.coordinates,{t:'line',w:f.properties.w+1.6})]:[]; }
+  if(s.type==='pt'){ const f=F.hit.find(f=>f.properties.nid===s.id); return f?[feat('Point',f.geometry.coordinates,{t:'pt'})]:[]; }
+  if(s.type==='bld'){ const b=bldData(s); if(!b||!b.geom) return []; const h=b.del?0.3:b.levels*FLOOR_H; return b.geom.map(p=>feat('Polygon',p,{t:'cap',h})); }
+  return [];
+}
+function drawSel(){ const src=map.getSource('ed-sel'); if(src) src.setData({type:'FeatureCollection',features:selFeatures()}); }
+function drawUpdate(){
+  const d=ED.draw, fs=[];
+  if(d&&d.pts.length){
+    const P=d.pts;
+    if(d.type==='bld'&&P.length>=3) fs.push(feat('Polygon',[[...P,P[0]]],{}));
+    if(P.length>=2) fs.push(feat('LineString',d.type==='bld'&&P.length>=3?[...P,P[0]]:P,{}));
+    P.forEach((p,i)=>fs.push(feat('Point',p,{first:i===0?1:0})));
+  }
+  map.getSource('ed-draw').setData({type:'FeatureCollection',features:fs});
+  edHint();
+}
+
+/* ---- değişiklik yardımcıları ---- */
+function setTags(id,obj){
+  commit(E=>{
+    const r=E.roads.find(r=>r.id===id);
+    if(r){ for(const k in obj){ if(obj[k]===undefined) continue; if(obj[k]===null) delete r.tags[k]; else r.tags[k]=String(obj[k]); } return; }
+    const orig=(RAW.ways.get(id)||{}).tags||{}, p=E.ways[id]||(E.ways[id]={});
+    for(const k in obj){
+      if(obj[k]===undefined) continue;
+      const v=obj[k]===null?null:String(obj[k]);
+      if((v===null&&orig[k]===undefined)||v===orig[k]) delete p[k]; else p[k]=v;
+    }
+    if(!Object.keys(p).length) delete E.ways[id];
+  });
+}
+const resizeLanes=(str,n)=>{ if(str==null) return undefined; const a=str.split('|'); while(a.length<n) a.push(''); return a.slice(0,n).join('|'); };
+function setBld(s,fn){
+  commit(E=>{
+    const nb=E.newBlds.find(b=>b.id===s.id); if(nb){ fn(nb,true); return; }
+    const b=BLD.get(s.id); if(!b) return;
+    const e=E.blds[s.id]||(E.blds[s.id]={});
+    fn(e,false);
+    if(!e.del&&(!e.levels||e.levels===b.lv)) delete E.blds[s.id];   // OSM değerine dönünce düzenleme kaydı silinir
+  });
+}
+function addPoint(kind,ll){
+  const tags={highway:kind};
+  if(kind==='crossing') tags.crossing='zebra';
+  if(kind==='sign'){ tags.sign=ED.signType; if(ED.signType==='speed') tags.maxspeed=String(ED.signSpeed||50); }
+  if(kind==='dir_sign') tags.text='Etimesgut';
+  const id=newId('p'); ED.sel={type:'pt',id};
+  commit(E=>E.points.push({id,ll,tags}));
+  setTool('select');
+}
+function finishDraw(){
+  const d=ED.draw; if(!d) return;
+  let pts=d.pts.filter((p,i,a)=>!i||hav(p,a[i-1])>0.8);
+  if(d.type==='road'){
+    if(pts.length<2){ toast('Yol için en az 2 nokta gerekli',2000); return; }
+    for(const k of [0,pts.length-1]){ const s=snapToWay(pts[k],7); if(s){ const a=along(s.w.P,s.w.C,s.pos); pts[k]=s.w.pr.back(a.p[0],a.p[1]); } }
+    const id=newId('u'); ED.sel={type:'way',id};
+    commit(E=>E.roads.push({id,coords:pts,tags:{highway:'residential',lanes:'2',oneway:'no',name:'Yeni yol'}}));
+  } else {
+    if(pts.length<3){ toast('Bina için en az 3 köşe gerekli',2000); return; }
+    const id=newId('b'); ED.sel={type:'bld',id};
+    commit(E=>E.newBlds.push({id,ring:[...pts,pts[0]],levels:4}));
+  }
+  ED.draw=null; setTool('select');
+}
+
+/* ---- seçim ---- */
+function pick(p){
+  const box=r=>[[p.x-r,p.y-r],[p.x+r,p.y+r]];
+  let f=map.queryRenderedFeatures(box(12),{layers:['ed-hit']})[0];
+  if(f) return {type:'pt',id:f.properties.nid};
+  f=map.queryRenderedFeatures(p,{layers:['ed-bld','b3']})[0];
+  if(f) return f.layer.id==='ed-bld'?{type:'bld',id:f.properties.bid}:{type:'bld',id:f.id};
+  f=map.queryRenderedFeatures(box(10),{layers:['ov-surf']})[0];
+  if(f) return {type:'way',id:f.properties.id};
+  if(!BLD.size&&map.queryRenderedFeatures(p,{layers:['bld']}).length) toast('Bina verisi yüklenmedi; binalar şu an düzenlenemez',2500);
+  return null;
+}
+function select(s){ ED.sel=s; drawSel(); edPanel(); }
+
+/* ---- haritaya tıklama (düzenleme modunda) ---- */
+function edClick(e){
+  const ll=[e.lngLat.lng,e.lngLat.lat];
+  if(!ED.show){ toast('Önce "Orijinal" görünümünü kapat',2000); return; }
+  const t=ED.tool;
+  if(ED.draw){ ED.draw.pts.push(ll); drawUpdate(); return; }
+  if(POINT_TOOLS.includes(t)){ addPoint(t,ll); return; }
+  if(t==='move'){ moveSel(ll); return; }
+  select(pick(e.point));
+}
+function moveSel(ll){
+  const s=ED.sel; setTool('select'); if(!s||s.type!=='pt') return;
+  commit(E=>{
+    if(typeof s.id==='string'){ const p=E.points.find(p=>p.id===s.id); if(p) p.ll=ll; }
+    else { const n=RAW.nodes.get(s.id); if(!n) return; E.delNodes.push(s.id); const id=newId('p'); E.points.push({id,ll,tags:{...n.tags}}); ED.sel={type:'pt',id}; }
+  });
+}
+
+/* ---- araçlar ---- */
+const HINTS={road:'Yolun geçeceği noktalara sırayla dokun',bld:'Binanın köşelerine sırayla dokun',move:'Yeni yerine dokun',
+  traffic_signals:'Işığı koyacağın yere dokun; en yakın yola ya da kavşağa oturur',crossing:'Yaya geçidini koyacağın yere dokun; yolu enine keser',
+  sign:'Levhayı seç, sonra yolun kenarına dokun',dir_sign:'Yön tabelasının yerine dokun'};
+const signGrid=(cur,act)=>`<div class="sgrid">${SIGNS.map(([k,n])=>`<button ${act}="${k}" class="${k===cur?'on':''}" title="${n}"><img src="${signURL(k)}" alt="${n}"></button>`).join('')}</div>`;
+function setTool(t){
+  ED.tool=t; ED.draw=(t==='road'||t==='bld')?{type:t,pts:[]}:null;
+  document.querySelectorAll('#edbar [data-tool]').forEach(b=>b.classList.toggle('on',b.dataset.tool===t));
+  try{ if(ED.draw||t==='move') map.doubleClickZoom.disable(); else map.doubleClickZoom.enable(); }catch(e){}
+  drawUpdate();
+}
+function edHint(){
+  const h=$('#edhint'), t=ED.tool;
+  if(!ED.on||t==='select'){ h.hidden=true; return; }
+  const n=ED.draw?ED.draw.pts.length:0;
+  h.classList.toggle('wide',t==='sign');
+  h.innerHTML=`<span>${HINTS[t]||''}${ED.draw?` · <b>${n}</b> nokta`:''}${t==='sign'?` · <b>${SIGN_TR[ED.signType]}</b>`:''}</span>`+(t==='sign'?signGrid(ED.signType,'data-sg'):'')+
+    (ED.draw?`<button class="btn" data-h="back" ${n?'':'disabled'}>Son noktayı sil</button><button class="btn primary" data-h="done" ${n>=(t==='bld'?3:2)?'':'disabled'}>Bitir</button>`:'')+
+    `<button class="btn" data-h="cancel">İptal</button>`;
+  h.hidden=false;
+}
+$('#edhint').addEventListener('click',e=>{
+  const g=e.target.closest('[data-sg]'); if(g){ ED.signType=g.dataset.sg; edHint(); return; }
+  const b=e.target.closest('[data-h]'); if(!b) return;
+  if(b.dataset.h==='back'&&ED.draw){ ED.draw.pts.pop(); drawUpdate(); }
+  if(b.dataset.h==='done') finishDraw();
+  if(b.dataset.h==='cancel') setTool('select');
+});
+
+/* ---- özellik paneli ---- */
+const laneBtn=(v,act)=>{ const has=v&&v!=='none'; return `<button ${act} title="${has?esc(v):'Ok yok'}"><svg viewBox="0 0 100 100">${has?arrowSVG(combo(v).split(';'),'#fff',10):'<path d="M38 50h24" stroke="rgba(255,255,255,.4)" stroke-width="6"/>'}</svg></button>`; };
+const stepper=(label,k,v,shown)=>`<div class="f"><span>${label}</span><div class="step"><button data-act="st" data-k="${k}" data-d="-1" aria-label="Azalt">−</button><b>${shown??v}</b><button data-act="st" data-k="${k}" data-d="1" aria-label="Artır">+</button></div></div>`;
+function lanesRow(label,key,n,t){
+  const a=(t[key]||'').split('|'); while(a.length<n) a.push('');
+  return `<div class="blk"><span>${label}</span><div class="lanes">${a.slice(0,n).map((v,i)=>laneBtn(v,`data-act="turn" data-k="${key}" data-i="${i}" data-n="${n}"`)).join('')}</div></div>`;
+}
+function wayPanelHTML(w){
+  const t=w.t, isUser=typeof w.id==='string', edited=isUser||!!EDITS.ways[w.id], ms=parseInt(t.maxspeed)||0, rb=['roundabout','circular'].includes(t.junction);
+  let h=`<header class="edh"><div><small>${isUser?'Senin eklediğin yol':'OSM yolu'}${edited&&!isUser?' · düzenlendi':''}</small><h3>${esc(t.name||t.ref||'İsimsiz yol')}</h3></div><button data-act="close" aria-label="Kapat">×</button></header>`;
+  h+=`<label class="f"><span>Ad</span><input id="edName" value="${esc(t.name||'')}" placeholder="Yol adı"></label>`;
+  h+=`<label class="f"><span>Tür</span><select id="edCls">${CLS.map(([k,n])=>`<option value="${k}" ${w.base===k?'selected':''}>${n}</option>`).join('')}</select></label>`;
+  h+=`<div class="f"><span>Yön</span><div class="seg"><button data-act="oneway" data-v="0" class="${!w.oneway?'on':''}" ${rb?'disabled':''}>Çift yön</button><button data-act="oneway" data-v="1" class="${w.oneway?'on':''}">Tek yön</button>${w.oneway?'<button data-act="flip">Çevir</button>':''}</div></div>`;
+  if(w.oneway) h+=stepper('Şerit sayısı','lanes1',w.L);
+  else h+=stepper('İleri şerit','fwd',w.fwd)+stepper('Geri şerit','bwd',w.bwd);
+  h+=stepper('Hız sınırı','ms',ms,ms?ms+' km/s':'Yok');
+  h+=`<div class="chips">${[30,50,70,82,90,110,120].map(v=>`<button data-act="msset" data-v="${v}" class="${v===ms?'on':''}">${v}</button>`).join('')}<button data-act="msset" data-v="0" class="${!ms?'on':''}">Yok</button></div>`;
+  if(w.oneway) h+=lanesRow('Şerit okları · soldan sağa · dokundukça değişir','turn:lanes',w.L,t);
+  else h+=lanesRow('İleri yön okları · soldan sağa','turn:lanes:forward',w.fwd,t)+lanesRow('Geri yön okları · soldan sağa','turn:lanes:backward',w.bwd,t);
+  h+=`<p class="hint">Haritadaki mavi oklar "ileri" yönü gösterir.</p>`;
+  const acts=[];
+  if(edited&&!isUser) acts.push('<button class="btn" data-act="resetway">OSM haline döndür</button>');
+  if(isUser) acts.push('<button class="btn danger" data-act="delway">Yolu sil</button>');
+  if(acts.length) h+=`<div class="acts">${acts.join('')}</div>`;
+  return h;
+}
+const BTYPE={house:'Müstakil ev',detached:'Müstakil ev',apartments:'Apartman',residential:'Konut',commercial:'Ticari',retail:'Dükkân',office:'Ofis',industrial:'Sanayi',warehouse:'Depo',school:'Okul',university:'Üniversite',hospital:'Hastane',mosque:'Cami',garage:'Garaj',garages:'Garajlar',shed:'Kulübe',public:'Kamu binası',government:'Kamu binası',supermarket:'Market',hotel:'Otel',construction:'İnşaat',yes:'Bina'};
+function bldPanelHTML(s){
+  const b=bldData(s); if(!b) return null;
+  const kind=b.isNew?'Senin eklediğin bina':(BTYPE[b.type]||'Bina');
+  let h=`<header class="edh"><div><small>${kind}${b.edited&&!b.isNew?' · düzenlendi':''}</small><h3>${b.del?'Kaldırıldı':esc(b.name||b.levels+' katlı bina')}</h3></div><button data-act="close" aria-label="Kapat">×</button></header>`;
+  if(b.del) return h+`<p class="hint">Bu bina haritadan kaldırıldı.</p><div class="acts"><button class="btn" data-act="bldreset">Geri getir</button></div>`;
+  h+=stepper('Kat sayısı','lv',b.levels);
+  h+=`<div class="chips">${[1,2,3,4,5,6,8,10,12,15,20,30].map(n=>`<button data-act="lvset" data-v="${n}" class="${n===b.levels?'on':''}">${n}</button>`).join('')}</div>`;
+  h+=`<p class="hint">Yükseklik ≈ ${(b.edited||b.isNew?b.levels*FLOOR_H:b.h0).toFixed(1).replace('.',',')} m`+(b.isNew?'':` · OSM'deki: ${b.lv0} kat ${b.est?'<b class="warn">(OSM’de kat yok, tahmini)</b>':''}`)+`</p>`;
+  h+=`<div class="acts">${b.edited&&!b.isNew?'<button class="btn" data-act="bldreset">OSM haline döndür</button>':''}<button class="btn danger" data-act="blddel">${b.isNew?'Binayı sil':'Binayı kaldır'}</button></div>`;
+  return h;
+}
+function ptInfo(id){
+  if(typeof id==='string'){ const p=EDITS.points.find(p=>p.id===id); return p?{user:true,tags:p.tags}:null; }
+  const n=RAW.nodes.get(id); return (!n||EDITS.delNodes.includes(id))?null:{user:false,tags:n.tags};
+}
+function ptPanelHTML(s){
+  const p=ptInfo(s.id); if(!p) return null;
+  const k=p.tags.highway;
+  let h=`<header class="edh"><div><small>${p.user?'Senin eklediğin':'OSM verisi'}</small><h3>${k==='sign'?(SIGN_TR[p.tags.sign]||'Levha'):(KIND_TR[k]||k)}</h3></div><button data-act="close" aria-label="Kapat">×</button></header>`;
+  if(k==='sign'){ h+=`<div class="blk"><span>Levha türü</span>${signGrid(p.tags.sign,'data-act="sgset" data-sg')}</div>`; if(p.tags.sign==='speed'){ const v=parseInt(p.tags.maxspeed)||50; h+=stepper('Hız','sp',v,v+' km/s')+`<div class="chips">${[20,30,40,50,70,82,90,110,120].map(x=>`<button data-act="spset" data-v="${x}" class="${x===v?'on':''}">${x}</button>`).join('')}</div>`; } }
+  if(k==='speed_sign'){ const v=parseInt(p.tags.maxspeed)||50; h+=stepper('Hız','sp',v,v+' km/s')+`<div class="chips">${[20,30,50,70,82,90,110,120].map(x=>`<button data-act="spset" data-v="${x}" class="${x===v?'on':''}">${x}</button>`).join('')}</div>`; }
+  if(k==='dir_sign') h+=`<label class="f"><span>Yazı</span><input id="edText" maxlength="24" value="${esc(p.tags.text||'')}"></label>`;
+  if(k==='traffic_signals'&&!p.user) h+=`<p class="hint">Kavşaktaki her yaklaşım yönüne bir ışık ve dur çizgisi çizilir.</p>`;
+  if(!p.user&&(k==='speed_sign'||k==='dir_sign')) {}
+  h+=`<div class="acts"><button class="btn" data-act="move">Taşı</button><button class="btn danger" data-act="ptdel">Kaldır</button></div>`;
+  return h;
+}
+function edPanel(){
+  const el=$('#edpanel'), s=ED.sel;
+  if(!ED.on||!s){ el.hidden=true; return; }
+  let h=null;
+  if(s.type==='way'){ const w=ways.get(s.id); if(w) h=wayPanelHTML(w); }
+  else if(s.type==='bld') h=bldPanelHTML(s);
+  else if(s.type==='pt') h=ptPanelHTML(s);
+  if(!h){ ED.sel=null; drawSel(); el.hidden=true; return; }
+  el.innerHTML=h; el.hidden=false;
+}
+$('#edpanel').addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]'); if(!b||b.disabled) return;
+  const s=ED.sel; if(!s) return;
+  const a=b.dataset.act, d=+b.dataset.d||0, v=+b.dataset.v;
+  if(a==='close'){ select(null); return; }
+  if(s.type==='way'){
+    const w=ways.get(s.id); if(!w) return; const t=w.t;
+    if(a==='st'){
+      const k=b.dataset.k;
+      if(k==='lanes1'){ const n=clamp(w.L+d,1,8); setTags(s.id,{lanes:n,'turn:lanes':resizeLanes(t['turn:lanes'],n)}); }
+      if(k==='fwd'||k==='bwd'){ let f=w.fwd,bw=w.bwd; if(k==='fwd') f=clamp(f+d,1,6); else bw=clamp(bw+d,1,6);
+        setTags(s.id,{lanes:f+bw,'lanes:forward':f,'lanes:backward':bw,'turn:lanes:forward':resizeLanes(t['turn:lanes:forward'],f),'turn:lanes:backward':resizeLanes(t['turn:lanes:backward'],bw)}); }
+      if(k==='ms'){ const n=clamp((parseInt(t.maxspeed)||0)+d*10,0,140); setTags(s.id,{maxspeed:n||null}); }
+    }
+    if(a==='msset') setTags(s.id,{maxspeed:v||null});
+    if(a==='oneway'){
+      if(v===1&&!w.oneway) setTags(s.id,{oneway:'yes',lanes:w.L,'lanes:forward':null,'lanes:backward':null,'turn:lanes:forward':null,'turn:lanes:backward':null});
+      if(v===0&&w.oneway){ const f=Math.max(1,Math.ceil(w.L/2)), bw=Math.max(1,w.L-f); setTags(s.id,{oneway:'no',lanes:f+bw,'lanes:forward':f,'lanes:backward':bw,'turn:lanes':null}); }
+    }
+    if(a==='flip'){
+      if(typeof s.id==='string') commit(E=>{ const r=E.roads.find(r=>r.id===s.id); if(r) r.coords.reverse(); });
+      else setTags(s.id,{oneway:t.oneway==='-1'?'yes':'-1'});
+    }
+    if(a==='turn'){
+      const key=b.dataset.k, n=+b.dataset.n, i=+b.dataset.i, arr=(t[key]||'').split('|'); while(arr.length<n) arr.push('');
+      const cur=arr[i]?combo(arr[i]):''; arr[i]=TURN_OPTS[(TURN_OPTS.indexOf(cur)+1)%TURN_OPTS.length];
+      const str=arr.slice(0,n).join('|'); setTags(s.id,{[key]:/[a-z]/.test(str.replace(/none/g,''))?str:null});
+    }
+    if(a==='resetway') commit(E=>{ delete E.ways[s.id]; });
+    if(a==='delway'){ ED.sel=null; commit(E=>{ E.roads=E.roads.filter(r=>r.id!==s.id); }); toast('Yol silindi · Geri al ile geri getirebilirsin',2500); }
+  }
+  if(s.type==='bld'){
+    if(a==='st') setBld(s,x=>{ x.levels=clamp((x.levels||1)+d,1,150); delete x.del; });
+    if(a==='lvset') setBld(s,x=>{ x.levels=v; delete x.del; });
+    if(a==='bldreset') commit(E=>{ delete E.blds[s.id]; });
+    if(a==='blddel'){
+      if(EDITS.newBlds.some(x=>x.id===s.id)){ ED.sel=null; commit(E=>{ E.newBlds=E.newBlds.filter(x=>x.id!==s.id); }); }
+      else setBld(s,x=>{ x.del=true; });
+    }
+  }
+  if(s.type==='pt'){
+    const setPt=(k,val)=>commit(E=>{ const p=E.points.find(p=>p.id===s.id); if(p) p.tags[k]=String(val); });
+    if(a==='st') { const p=ptInfo(s.id); setPt('maxspeed',clamp((parseInt(p.tags.maxspeed)||50)+d*10,10,140)); }
+    if(a==='spset'){ setPt('maxspeed',v); ED.signSpeed=v; }
+    if(a==='sgset'){ setPt('sign',b.dataset.sg); ED.signType=b.dataset.sg; if(b.dataset.sg==='speed') commit(E=>{ const p=E.points.find(p=>p.id===s.id); if(p&&!p.tags.maxspeed) p.tags.maxspeed='50'; }); }
+    if(a==='move'){ setTool('move'); }
+    if(a==='ptdel'){ ED.sel=null; commit(E=>{ if(typeof s.id==='string') E.points=E.points.filter(p=>p.id!==s.id); else if(!E.delNodes.includes(s.id)) E.delNodes.push(s.id); }); toast('Kaldırıldı · Geri al ile geri getirebilirsin',2500); }
+  }
+});
+$('#edpanel').addEventListener('change',e=>{
+  const s=ED.sel; if(!s) return; const v=e.target.value.trim();
+  if(e.target.id==='edName') setTags(s.id,{name:v||null});
+  if(e.target.id==='edCls') setTags(s.id,{highway:v});
+  if(e.target.id==='edLv'){ const n=clamp(parseInt(v)||1,1,150); setBld(s,x=>{ x.levels=n; delete x.del; }); }
+  if(e.target.id==='edText') commit(E=>{ const p=E.points.find(p=>p.id===s.id); if(p) p.tags.text=v||'Tabela'; });
+});
+
+/* ---- alt çubuk, yedek ---- */
+function edInfo(){
+  const n=editCount();
+  $('#edCount').textContent=n?`${n} düzenleme`:'Henüz düzenleme yok';
+  const sv=$('#edSave'); sv.textContent=ED.saveOk?'Bu tarayıcıya kaydedildi':'Kaydedilemedi · yedeği indir'; sv.className=ED.saveOk?'':'bad';
+  $('#edUndo').disabled=!ED.undo.length; $('#edRedo').disabled=!ED.redo.length;
+  const dt=$('#edData'); if(dt) dt.textContent=DATA_AT?`OSM verisi: ${new Date(DATA_AT).toLocaleDateString('tr-TR')}`:'OSM verisi yok';
+}
+function setEdit(on){
+  ED.on=on; document.body.classList.toggle('edit',on);
+  $('#edbar').hidden=!on; $('#bEdit').classList.toggle('on',on);
+  try{ map.setLayoutProperty('ed-hit','visibility',on?'visible':'none'); }catch(e){}
+  if(on){
+    if(nav.driving){ nav.driving=false; $('#bGo').textContent='Devam'; }
+    hideJV(); if(pickMode) setPick(false); if(popup) popup.remove();
+    if(map.getZoom()<16.5) map.easeTo({zoom:17.2,duration:600});
+    toast('Düzenleme açık. Bir yola, binaya ya da noktaya dokun.',3500);
+  } else { ED.sel=null; setTool('select'); $('#edmenu').hidden=true; }
+  drawSel(); edPanel(); edInfo(); edHint();
+}
+$('#bEdit').onclick=()=>setEdit(!ED.on);
+$('#edbar').addEventListener('click',e=>{ const b=e.target.closest('[data-tool]'); if(b) setTool(ED.tool===b.dataset.tool&&b.dataset.tool!=='select'?'select':b.dataset.tool); });
+$('#edUndo').onclick=undo; $('#edRedo').onclick=redo;
+$('#edDone').onclick=()=>setEdit(false);
+$('#edOrig').onclick=()=>{
+  ED.show=!ED.show; document.body.classList.toggle('orig',!ED.show); $('#edOrig').classList.toggle('on',!ED.show);
+  if(!ED.show){ setTool('select'); select(null); toast('Orijinal OSM görünümü · düzenlemelerin duruyor, sadece gizli',3000); }
+  rebuild();
+};
+$('#edMore').onclick=()=>{ $('#edmenu').hidden=!$('#edmenu').hidden; };
+$('#edExport').onclick=()=>{
+  try{
+    const blob=new Blob([JSON.stringify({app:'yol-harita-3b',v:1,saved:new Date().toISOString(),edits:EDITS},null,1)],{type:'application/json'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`yol-harita-duzenlemeler-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+    toast('Yedek indirildi',2000);
+  }catch(e){ toast('Yedek indirilemedi',2500); }
+  $('#edmenu').hidden=true;
+};
+$('#edImport').onchange=e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ const j=JSON.parse(r.result); const im=cleanEdits(j.edits||j); commit(E=>{ Object.assign(E,im); }); ED.sel=null; edPanel(); toast(`Yedek yüklendi · ${editCount()} düzenleme`,2500); }
+    catch(err){ toast('Bu dosya okunamadı; mevcut düzenlemelerin değişmedi.',3500); } };
+  r.readAsText(f); e.target.value=''; $('#edmenu').hidden=true;
+};
+$('#edRefresh').onclick=()=>{ $('#edmenu').hidden=true; loadArea(true); };
+let clrT;
+$('#edClear').onclick=e=>{
+  const b=e.currentTarget;
+  if(!b.dataset.armed){ b.dataset.armed='1'; b.textContent='Emin misin? Tekrar bas'; clearTimeout(clrT); clrT=setTimeout(()=>{ delete b.dataset.armed; b.textContent='Tüm düzenlemeleri sil'; },4000); return; }
+  delete b.dataset.armed; b.textContent='Tüm düzenlemeleri sil'; $('#edmenu').hidden=true;
+  ED.sel=null; commit(E=>{ Object.assign(E,blankEdits()); }); toast('Hepsi silindi · Geri al ile geri getirebilirsin',3500);
+};
+document.addEventListener('keydown',e=>{
+  if(!ED.on||e.target.matches('input,select,textarea')) return;
+  const k=e.key.toLowerCase();
+  if((e.ctrlKey||e.metaKey)&&k==='z'){ e.preventDefault(); e.shiftKey?redo():undo(); return; }
+  if((e.ctrlKey||e.metaKey)&&k==='y'){ e.preventDefault(); redo(); return; }
+  if(k==='escape'){ if(ED.tool!=='select') setTool('select'); else select(null); }
+  if(k==='enter'&&ED.draw) finishDraw();
+  if(k==='backspace'&&ED.draw){ e.preventDefault(); ED.draw.pts.pop(); drawUpdate(); }
+});
+map.on('dblclick',e=>{ if(ED.on&&ED.draw){ e.preventDefault(); finishDraw(); } });
+
+
+/* ============ başlat ============ */
+map.on('load',()=>{
+  addSignalImgs(); setWidths();
+  setCar(START,-28);
+  let phase=0; setInterval(()=>{ if(!stats.sig||document.hidden) return; phase=(phase+1)%12; ['r','y','g'].forEach(c=>map.setPaintProperty('ov-sig-'+c,'icon-opacity',lampOp(c,phase))); },1000);
+  loadEdits(); edInfo();
+  map.getSource('area').setData(feat('Polygon',[[[AREA.w,AREA.s],[AREA.e,AREA.s],[AREA.e,AREA.n],[AREA.w,AREA.n],[AREA.w,AREA.s]]]));
+  loadArea(false);
+  if(editCount()) toast(`${editCount()} kayıtlı düzenleme yüklendi.`,4000);
+});
+map.on('error',e=>{ if(e&&e.error&&/tiles\.openfreemap/.test(String(e.error.message||''))) status('err','Harita karoları yüklenemedi'); });
+</script>
+</body>
+</html>
